@@ -37,8 +37,8 @@
         <li class="nav-item dropdown">
         <a class="nav-link active dropdown-toggle" href="uxcasestudy.html" data-toggle="dropdown"> UX Design</a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="#theDesignProcess">Design Process</a>
-            <a class="dropdown-item" href="#thePhase1">MMSV -Phase 1 </a>
+            <a class="dropdown-item" href="uxcasestudy.html">Design Process</a>
+            <a class="dropdown-item" href="uxcasestudy-2COPY.html">Case study 1 </a>
             <a class="dropdown-item" href="#thePhase2">MMSV -Phase 2</a>
             <a class="dropdown-item" href="#thePhase3">MMSV -Phase 3</a>
             <a class="dropdown-item" href="#thePhase4">MMSV -Phase 4</a>
@@ -84,6 +84,19 @@
                 </span>
           </div>
   </div> 
+  
+  <!-----------project images-->
+  <div class="row justify-content-center lnDst15">
+        <div class="col-12 txAlcntr padbtmTwl"><span class="uprCase"> </span>
+        </div>
+        <img src="images/g2o-img-12.png" width="100%" height="auto" alt=""/>
+    </div>
+        
+          
+           
+     <!------------image 2 col-->
+
+    
   <div class="row justify-content-center ">
     <div class="row  padtpTwl">
         <p>G2O Shipping is a bulk carrier shipping company that uses this application for its stowage and voyage planning operations. The platform helps the team efficiently manage cargo distribution, optimize vessel performance, and ensure safe and compliant voyages."</p>
@@ -961,11 +974,14 @@
      </div>
     <!-------------------->
       <div class="row padtpTwl padbtmTwl table-responsive brdrbtm">
-        <div class="row padtpTwl uprCase"> User Persona:</div> 
+        <div class="row padtpTwl uprCase"> User Story:
+        </div> 
+        <div class="row padtpTwl ">  Weather and Route Constraints
+        </div> 
         <table class="table table-borderless">
           
           <tbody>
-            <tr class="textCntr"><img src="images/persona-01.png" width="30%" height="auto" alt=""/><br>
+            <tr class="textCntr"><img src="images/persona-01.png" width="20%" height="auto" alt=""/><br>
                 <b>Kari Johansen- Planner</b><br> Senior Voyage & Stowage Planner<br>
             </tr>
             <tr>
@@ -973,14 +989,274 @@
                    Voyage Planner 
                    <b>I want to</b>  
                    view real-time weather conditions and route restrictions directly within the voyage planning interface  <br/>
-                   <b> So that I can</b>  
+                   <b> So that I can</b>  make informed decisions, adjust routes proactively, and ensure voyage safety and fuel efficiency without switching between multiple external tools.
+              </p>
+            </tr>
+            
+            <tr>
+              <p> <b>Acceptance Criteria:</b>  <br/>
+                <b>1. Weather Overlay on Map:</b><br/>
+                      The system displays real-time weather layers (wind, wave height, current, storm zones) on the voyage route map.<br/>
+                       Users can toggle visibility for each weather parameter.<br/>
+                   <b>2. Weather Overlay on Map:</b> <br/> 
+                   view real-time weather conditions and route restrictions directly within the voyage planning interface  <br/>
+                   <b>3. Forecast Timeline:</b>  <br/>
+                   A time-slider allows the user to view how weather evolves along the voyage timeline.<br/>
+                   The system updates forecasts dynamically as departure times change.<br/> 
+                   <b>4. Smart Recommendations:</b>  <br/>
+                   The app suggests optimal routes balancing weather conditions, ETA, and fuel consumption.<br/>
+                                        Users can compare their planned route with the suggested one visually and through summary metrics.<br/>
+                   <b>5. Port-Level Weather Snapshot:</b>  <br/>
+                   Each port in the rotation view displays key weather indicators (wind, tide, visibility) for expected arrival time.<br/>
+                   <b>6. Notification and Updates:</b>  <br/>
+                   view real-time weather conditions and route restrictions directly within the voyage planning interface  <br/>
+                   <b>2. Weather Overlay on Map:</b>  <br/>
+                   When weather conditions change significantly, users are notified within the app (e.g., “Strong headwinds expected near Colombo — ETA may increase by 6 hours”).<br/>
+                   
               </p>
             </tr>
           </tbody>
         </table>
-            
-              
+     <!-------------------->
+      <div class="row padtpTwl padbtmTwl table-responsive brdrbtm">
+        <div class="row padtpTwl uprCase"> Observations  and User Research - Pain points of users
+        </div> 
+        <table class="table">
+            <thead>
+              <tr>
+                <th><img src="images/userAction-pain.png" width="15%" alt="plane"><span class="pdsides10">Issues</span> </th>
+                <th><img src="images/userAction-happy.png" width="15%" alt="plane"><span class="pdsides10">UX Solution</span> </th>
+              </tr>
+            </thead>
+              <tbody>
+                <tr class="brdrbtm">
+                  <td>
+                    <b>Version Confusion - with multiple plans.</b><br>
+                    Receive several versions of the same plan (e.g., Plan_v3_final_final.pdf 😅).<br/>
+                    Cannot easily distinguish what changed between versions.<br/>
+                    Don’t know which one is approved or currently active.<br/>
+                    Waste time checking email attachments or shared folders.
+
+                  </td>
+                  <td>
+                    1. Introduce a versioning system within the application: Version number + date/time + author name displayed prominently.<br/>
+                                        2. Use color-coded status tags:<br/>
+                                        🟢 Approved / Final<br/>
+                                        🟡 Draft / Pending Review<br/>
+                                        🔴 Outdated / Superseded<br/>
+                                        3. Auto-highlight to  Which plan is current, What changed, Who approved it, Where to find older versions (if needed)
+                  </td>
+                </tr>
+                <tr class="">
+                  <td>
+                    <b>Weather and route constraints. </b><br>
+                    Users face challenges such as:<br/>
+                                        1. Having to manually check weather forecasts or external route advisories.<br/>
+                                        2. Difficulty visualizing how weather impacts route decisions, fuel usage, or ETA.<br/>
+                                        3. Lack of real-time updates or alerts within the planning interface.
+
+                  </td>
+                  <td>
+                     <b>Weather-Integrated Route Visualization :</b><br/>
+                       1. Data Simplification & Color Logic. Instead of showing complex meteorological data Use traffic-light color coding for risk:</span><br/>
+                                        🟢 Safe<br/>
+                                        🟡 Caution<br/>
+                                            🔴 Unsafe<br/>
+                                            Show small icons for condition types (e.g., 🌧️ Rain, 🌊 Swell, 💨 Wind)<br/>
+                        <b>Outcome:</b><br>
+                        Users can see, predict, and respond to weather and route constraints without leaving the application — improving both decision quality and confidence.
+                  </td>
+                </tr>
+              </tbody>
+        </table>
+     </div>
+      <!----------VISUAL DESIGN SECTION------------->
+    <div class="row padbtmTwl padtpTwl">
+      <span class="lineBr fnttntfr  bluebg">
+        Visual Design
+      </span>  
+    </div>
+    <div class="row padtpTwl uprCase"> Typography
+    </div> 
+    <div class="row padtpTwl "> <b>Font family- Font weights</b>
+    </div> 
+      <img src="images/Typo-01.png" width="95%" alt="plane">
+    <div class="row">
+        <table class="widthFull mrgnTop20">
+               <thead>
+                       <tr>
+                                            <th>Style</th>
+                                            <th>Type face</th>
+                                            <th>Weight</th>
+                        </tr>
+               </thead>
+                                 <tr>
+                                        <td class="">Display- Large</td>
+                                        <td>Lato</td>
+                                        <td>Regular</td>
+                                        <td>34</td>
+                                </tr>
+                                <tr>
+                                        <td class="">H1</td>
+                                        <td>Lato</td>
+                                        <td>Regular</td>
+                                        <td>28</td>
+                                        
+                                 </tr>
+                                 <tr>
+                                        <td class="">H2</td>
+                                        <td>Lato</td>
+                                        <td>Regular</td>
+                                        <td>26</td>
+                                        
+                                  </tr>
+                                  <tr>
+                                        <td class="">H3</td>
+                                        <td>Lato</td>
+                                        <td>Regular</td>
+                                        <td>24</td>
+                                  </tr>
+                                  
+                                  <tr>
+                                        <td class="">Headline</td>
+                                        <td>Lato</td>
+                                        <td>Regular</td>
+                                        <td>20</td>
+                                  </tr>
+                                        
+                                  <tr>
+                                        <td class="">Head line Bold</td>
+                                        <td>Lato</td>
+                                        <td>Bold</td>
+                                        <td>18</td>
+                                  </tr>
+                                        
+                                  <tr>
+                                        <td class="">Sub Header</td>
+                                        <td>Lato</td>
+                                        <td>Regular</td>
+                                        <td>18</td>
+                                  </tr>
+                                        
+                                  <tr>
+                                        <td class="">Sub Header Bold</td>
+                                        <td>Lato</td>
+                                        <td>Bold</td>
+                                        <td>16</td>
+                                  </tr>
+                                        
+                                  <tr>
+                                        <td class="">Body</td>
+                                        <td>Lato</td>
+                                        <td>Regular</td>
+                                        <td>16</td>
+                                  </tr>
+                                        
+                                  <tr>
+                                        <td class="">Body Bold</td>
+                                        <td>Lato</td>
+                                        <td>Bold</td>
+                                        <td>14</td>
+                                  </tr>
+                                  <tr>
+                                        <td class="">Body Highlight</td>
+                                        <td>Lato</td>
+                                        <td>Semi Bold</td>
+                                        <td>16</td>
+                                        
+                                  </tr>
+                                  <tr>
+                                        <td class="">Body Small</td>
+                                        <td>Lato</td>
+                                        <td>Regular</td>
+                                        <td>14</td>
+                                  </tr>
+                                  <tr>
+                                        <td class="">Body Smallest</td>
+                                        <td>Lato</td>
+                                        <td>Regular</td>
+                                        <td>12</td>
+                                  </tr>
+                                        
+                                            
+                                        
+          </table>
+    </div>
     <!-------------------->
+    
+    <div class="row padtpTwl uprCase"> Color Palette
+    </div> 
+    <div class="row padtpTwl "> <b>Primary</b>
+    </div> 
+
+    <div class="clrPlt-section">
+                                    <div class="clrPlt-swatch-grid">
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#386664; color: #fff;">Primary - Dark</div>
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#4a7573; color: #fff;">Primary - Dark 90</div>
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#5d8482; color: #fff;">Primary - Dark 80</div>
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#85a3a2; color: #fff;">Primary - Dark 60</div>
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#adc1c1;">Primary - Dark 40</div>
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#d6e1e0;">Primary - Dark 20</div>
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#7bbabb; color: #fff;">Primary - Light</div>
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#94c7c8;">Primary - Light 80</div>
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#aed6d6;">Primary - Light 60</div>
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#c9e3e3;">Primary - Light 40</div>
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#e3f1f2;">Primary - Light 20</div>
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#dffee3;">Hover Green - Primary </div>
+                                    </div>
+    </div>
+    <div class="row padtpTwl "> <b>Black & Grey</b>
+    </div> 
+    <div class="clrPlt-section">
+                                    <div class="clrPlt-swatch-grid">
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#17161b; color: #fff;">Font - Body</div>
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#000; color: #fff;">Black 100 Extreme</div>
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#454549; color: #fff;">Black 80</div>
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#747376; color: #fff;">Black 60</div>
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#a2a2a2;">Black 40</div>
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#d1d1d1;">Black 20</div>
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#e7e7e8;">Black 10</div>
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#f2f2f2;">Black 5</div>
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#d3d3d3;">Border Grey</div>
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#17161b; color: #fff;">Soft Black</div>
+    </div>
+    <div class="row padtpTwl "> <b>Secondary</b>
+    </div> 
+    <div class="clrPlt-section">
+                                    <div class="clrPlt-swatch-grid">
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#e69766; color: #fff;">Secondary</div>
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#eaab84;">Secondary 80</div>
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#efc0a2;">Secondary 60</div>
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#f4d4c1;">Secondary 40</div>
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#faeadf;">Secondary 20</div>
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#fdf5f5;"> Hover - Pale- Secondary</div>
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#f9e3d5;"> Hover - Bright - Secondary</div>
+                                    </div>
+     </div>
+     <div class="row padtpTwl "> <b>Info</b>
+    </div> 
+     <div class="clrPlt-section">
+                                    <div class="clrPlt-swatch-grid">
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#d5352a; color: #fff;">Danger-Caution-Red</div>
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#ffe8e6; border: 1px solid #d5352a;">Secondary Red</div>
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#feb352;">Alert</div>
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#fff4d4; border: 1px solid #feb352;">Secondary Alert</div>
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#41c770;">Success</div>
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#e7ffef;border: 1px solid #41c770;;">Secondary Success</div>
+                                        <div class="clrPlt-swatch clrPlt-primary" style="background:#e0f5ff; border: 1px solid #83d8ff;"> Info light</div>
+    </div>
+      
+    <!-------------------->
+    <div class="row padtpTwl uprCase"> UI Components
+    </div> 
+    <div class="row padtpTwl "> <b>Figma Link</b>
+    </div> 
+    <div class="row">
+      <span class="linkBg">
+        <a href="https://www.figma.com/proto/CBElqTZG0en2ZwUaAYStge/UI-LIBRARY-01?t=FaE3MTzn1hCdSsx3-1" target="_blank" class="btn">View designs- Figma</a>
+      </span>
+    </div>
+    <!--------------------->
 
   </div>
 </div>
@@ -992,7 +1268,9 @@
 
 
         <!--script-->
+    <script type="text/javascript" src="js/loaders.js"></script>
     <script type="text/javascript" src="js/stepper.js"></script>
+    <script type="text/javascript" src="js/modal.js"></script>
 
 </body>
 </html>
