@@ -36,7 +36,7 @@ a:hover{ color:#ff8308 ;text-decoration: none; }
 .textGray{color: #dddddd;}
 .coBrandBl{color:  #1c4e84;}
 .uprCase{text-transform: uppercase; font-size: large; font-weight: 700;}
-.lnDst15{margin-bottom:15px }
+.lnDst15{margin-bottom: 16px!important; }
 .mrgnTop12{ margin-top: 12px;}
 .mrgnTop20{ margin-top: 20px;}
 .mrgnTop30{ margin-top: 30px;}
@@ -58,7 +58,7 @@ a:hover{ color:#ff8308 ;text-decoration: none; }
 .bluebg{background-color: #1c4e84; color:#ffffff;}
 .pdbtspace10{padding-bottom: 10px;}
 .pdtb15{padding: 10px 0 10px;}
-.pdsides10{padding: 0 10px 0 10px 0 !important;}
+.pdsides10{padding: 0 10px!important;}
 
 .badge-info{background-color: #1c4e84; margin-right: 10px;}
 .nav-tabs{width: 100%;}
@@ -67,6 +67,8 @@ a:hover{ color:#ff8308 ;text-decoration: none; }
 .mrgnAuto{ margin: auto; }
 .txAlcntr{text-align: center;}
 .txAlLft{text-align: left;}
+.widthFull{width: 100%;}
+.linkBg{ background-color: #d8eeff; border: 1px solid #70b3ff ; border-radius: 3px;}
 
 .navbar{
     max-width: 960px;
@@ -387,3 +389,68 @@ li:hover{background-color:  #f3f3f3!important;
     padding: 0.3rem 0.8rem;
     border-radius: 20px;
      }
+      /*color pallet styling*/
+        .clrPlt-container {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+      max-width: 1200px;
+    }
+    .clrPlt-section {
+      flex: 1 1 48%;
+      font-size: .6rem;
+    }
+    .clrPlt-main-color {
+      height: 160px;
+      display: flex;
+      align-items: flex-end;
+      padding: 24px;
+      color: #fff;
+      border-radius: 8px;
+      margin-bottom: 24px;
+      box-sizing: border-box;
+    }
+    .clrPlt-primary {
+      background: #1E6BFB;
+    }
+    .clrPlt-primary-text {
+      background: #171E29;
+      color: #fff;
+    }
+    .clrPlt-swatch-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+    .clrPlt-swatch {
+      border-radius:0;
+      padding: 16px;
+      height: 66px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      box-sizing: border-box;
+      color: #233554;
+      font-weight: 500;
+    }
+    .clrPlt-swatch.clrPlt-primary {
+      color: #233554;
+    }
+    .clrPlt-swatch.text {
+      color: #233554;
+    }
+    .clrPlt-swatch .hex {
+      color: #7c95b7;
+    }
+    .clrPlt-swatch.dark {
+      color: #fff !important;
+    }
+    .thumb {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 0.2rem;
+}
+.thumb img:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
