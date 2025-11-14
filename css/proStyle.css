@@ -107,6 +107,9 @@ li.green-bullet::marker {
 .bgSkyBlue {
   background-color: #00a2ec!important;;
 }
+.bgPalegreen {background-color:#7a9c78!important ;}
+.bgPaleblue {background-color:#567796!important ;}
+
 .wlcmbx {
     background-color: #d05243;
     width: 100%;
