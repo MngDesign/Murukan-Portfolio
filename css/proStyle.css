@@ -116,7 +116,7 @@ li.green-bullet::marker {
     width: 100%;
     height: 65vh;
     display: table;
-    padding: 20px;
+    padding: 20px 20px 0 20px;
     margin: auto;
     font-family: 'Montserrat', sans-serif;
     font-size: 34px;
@@ -131,7 +131,7 @@ li.green-bullet::marker {
     width: 90%;
 }
 .wlcmbx.titlbox {
-    height: 15vh;
+    height: auto;
 }
 .wlcmbx.mediumbx {
     height: 45vh;
@@ -142,7 +142,7 @@ li.green-bullet::marker {
 }
 .wlcmbx.titlbox.hiBlu {
     
-    color:#011f4f;
+    color:#fff;
 }
 .oliveGreen{color:#376837;}
 .linkbox {
@@ -292,7 +292,7 @@ a:hover{
     background-color: #8e1272;
 }
 .wlcmbx.blgport {
-    background-color: #80b934;
+    background-color: #0078ef;
 }
 .brdrRit{border-right: 1px solid #f85700;
 }
