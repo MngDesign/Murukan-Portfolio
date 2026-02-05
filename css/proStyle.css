@@ -227,28 +227,28 @@ li.green-bullet::marker {
   color: #000!important;
 }
 .caseFbg {
-  background-image: url('../images/Artboard-1.png');
+  background-image: url('../images/Artboard-1.jpg');
   background-repeat: no-repeat; /* Don't repeat the image */
   background-size: cover; /* Scale to cover the div */
   background-position: center; /* Center the image */
   color: #FFF!important;
 }
 .caseFbg-B {
-  background-image: url('../images/Artboard-2.png');
+  background-image: url('../images/Artboard-2.jpg');
   background-repeat: no-repeat; /* Don't repeat the image */
   background-size: cover; /* Scale to cover the div */
   background-position: center; /* Center the image */
   color: #FFF!important;
 }
 .caseFbg-C {
-  background-image: url('../images/Artboard-3.png');
+  background-image: url('../images/Artboard-3.jpg');
   background-repeat: no-repeat; /* Don't repeat the image */
   background-size: cover; /* Scale to cover the div */
   background-position: center; /* Center the image */
   color: #FFF!important;
 }
 .caseFbg-D {
-  background-image: url('../images/Artboard-4.png');
+  background-image: url('../images/Artboard-4.jpg');
   background-repeat: no-repeat; /* Don't repeat the image */
   background-size: cover; /* Scale to cover the div */
   background-position: center; /* Center the image */
@@ -256,35 +256,35 @@ li.green-bullet::marker {
 }
 
 .caseFbg-E {
-  background-image: url('../images/Artboard-5.png');
+  background-image: url('../images/Artboard-5.jpg');
   background-repeat: no-repeat; /* Don't repeat the image */
   background-size: cover; /* Scale to cover the div */
   background-position: center; /* Center the image */
   color: #FFF!important;
 }
 .caseFbg-F {
-  background-image: url('../images/Artboard-6.png');
+  background-image: url('../images/Artboard-6.jpg');
   background-repeat: no-repeat; /* Don't repeat the image */
   background-size: cover; /* Scale to cover the div */
   background-position: center; /* Center the image */
   color: #FFF!important;
 }
 .caseFbg-G {
-  background-image: url('../images/Artboard-7.png');
+  background-image: url('../images/Artboard-7.jpg');
   background-repeat: no-repeat; /* Don't repeat the image */
   background-size: cover; /* Scale to cover the div */
   background-position: center; /* Center the image */
   color: #FFF!important;
 }
 .caseFbg-H {
-  background-image: url('../images/Artboard-8.png');
+  background-image: url('../images/Artboard-8.jpg');
   background-repeat: no-repeat; /* Don't repeat the image */
   background-size: cover; /* Scale to cover the div */
   background-position: center; /* Center the image */
   color: #FFF!important;
 }
 .caseFbg-I {
-  background-image: url('../images/Artboard-9.png');
+  background-image: url('../images/Artboard-9.jpg');
   background-repeat: no-repeat; /* Don't repeat the image */
   background-size: cover; /* Scale to cover the div */
   background-position: center; /* Center the image */
