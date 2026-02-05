@@ -112,7 +112,7 @@ li.green-bullet::marker {
 .bgPaleblue {background-color:#567796!important ;}
 
 .wlcmbx {
-    background-color: #d05243;
+    background-color: #ff4e00;
     width: 100%;
     height: 65vh;
     display: table;
@@ -130,6 +130,12 @@ li.green-bullet::marker {
 }
 .smlPct{
     width: 90%;
+}
+.wlcmbx.caseBoxA{
+    height: 1050px;
+}
+.wlcmbx.caseBoxB{
+    height: 1600px;
 }
 .wlcmbx.titlbox {
     height: auto;
@@ -221,13 +227,69 @@ li.green-bullet::marker {
   color: #000!important;
 }
 .caseFbg {
-  background-image: url('../images/cs-gift-bg.png');
+  background-image: url('../images/Artboard-1.png');
+  background-repeat: no-repeat; /* Don't repeat the image */
+  background-size: cover; /* Scale to cover the div */
+  background-position: center; /* Center the image */
+  color: #FFF!important;
+}
+.caseFbg-B {
+  background-image: url('../images/Artboard-2.png');
+  background-repeat: no-repeat; /* Don't repeat the image */
+  background-size: cover; /* Scale to cover the div */
+  background-position: center; /* Center the image */
+  color: #FFF!important;
+}
+.caseFbg-C {
+  background-image: url('../images/Artboard-3.png');
+  background-repeat: no-repeat; /* Don't repeat the image */
+  background-size: cover; /* Scale to cover the div */
+  background-position: center; /* Center the image */
+  color: #FFF!important;
+}
+.caseFbg-D {
+  background-image: url('../images/Artboard-4.png');
   background-repeat: no-repeat; /* Don't repeat the image */
   background-size: cover; /* Scale to cover the div */
   background-position: center; /* Center the image */
   color: #FFF!important;
 }
 
+.caseFbg-E {
+  background-image: url('../images/Artboard-5.png');
+  background-repeat: no-repeat; /* Don't repeat the image */
+  background-size: cover; /* Scale to cover the div */
+  background-position: center; /* Center the image */
+  color: #FFF!important;
+}
+.caseFbg-F {
+  background-image: url('../images/Artboard-6.png');
+  background-repeat: no-repeat; /* Don't repeat the image */
+  background-size: cover; /* Scale to cover the div */
+  background-position: center; /* Center the image */
+  color: #FFF!important;
+}
+.caseFbg-G {
+  background-image: url('../images/Artboard-7.png');
+  background-repeat: no-repeat; /* Don't repeat the image */
+  background-size: cover; /* Scale to cover the div */
+  background-position: center; /* Center the image */
+  color: #FFF!important;
+}
+.caseFbg-H {
+  background-image: url('../images/Artboard-8.png');
+  background-repeat: no-repeat; /* Don't repeat the image */
+  background-size: cover; /* Scale to cover the div */
+  background-position: center; /* Center the image */
+  color: #FFF!important;
+}
+.caseFbg-I {
+  background-image: url('../images/Artboard-9.png');
+  background-repeat: no-repeat; /* Don't repeat the image */
+  background-size: cover; /* Scale to cover the div */
+  background-position: center; /* Center the image */
+  color: #FFF!important;
+}
 
 
 /********Responsive script****/
