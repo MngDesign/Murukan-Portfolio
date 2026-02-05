@@ -51,7 +51,7 @@ a:hover{ color:#ff8308 ;text-decoration: none; }
 .padtpTnty{padding-top: 20px;}
 .lBr{display: block;}
 .wbr{word-break: keep-all;}
-.lineBr{width: 97%; border-bottom: 1px solid #012f49;}
+.lineBr{width: 97%; border-bottom: 1px solid #cccccc;}
 .textCntr{text-align: center;}
 .fnttntfr{font-size: 24px;}
 .brdrbtm{border-bottom:1px solid #dee2e6;}
@@ -59,7 +59,7 @@ a:hover{ color:#ff8308 ;text-decoration: none; }
 .pdbtspace10{padding-bottom: 10px;}
 .pdtb15{padding: 10px 0 10px;}
 .pdsides10{padding: 0 10px!important;}
-
+.bold{font-weight: 400;}
 .badge-info{background-color: #1c4e84; margin-right: 10px;}
 .nav-tabs{width: 100%;}
 .tab-content{border-bottom: 1px solid #c0c0c0; padding-bottom: 20px;}
@@ -116,12 +116,13 @@ li.green-bullet::marker {
     width: 100%;
     height: 65vh;
     display: table;
-    padding: 20px 20px 0 20px;
+    padding: 20px;
     margin: auto;
     font-family: 'Montserrat', sans-serif;
     font-size: 34px;
     text-align: center;
     color: #ffffff;
+    margin-bottom: 12px;
 }
 .wlcmbx span {
     vertical-align:middle;
@@ -219,6 +220,14 @@ li.green-bullet::marker {
   background-position: center; /* Center the image */
   color: #000!important;
 }
+.caseFbg {
+  background-image: url('../images/cs-gift-bg.png');
+  background-repeat: no-repeat; /* Don't repeat the image */
+  background-size: cover; /* Scale to cover the div */
+  background-position: center; /* Center the image */
+  color: #FFF!important;
+}
+
 
 
 /********Responsive script****/
@@ -317,6 +326,7 @@ li:hover{background-color:  #f3f3f3!important;
  }
 /****************/
 .bluebg {padding-left: 12px;}
+.greybg {padding-left: 12px;background-color: #eeeeee; color:#000;}
 /* Stepper code*/
         .stepperContainer { 
             max-width:1100px; 
