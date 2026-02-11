@@ -132,7 +132,7 @@ li.green-bullet::marker {
     width: 90%;
 }
 .wlcmbx.caseBoxA{
-    height: 1050px;
+    height: 120vh;
 }
 .wlcmbx.caseBoxB{
     height: 1600px;
@@ -227,70 +227,95 @@ li.green-bullet::marker {
   color: #000!important;
 }
 .caseFbg {
-  background-image: url('../images/Artboard-1.jpg');
-  background-repeat: no-repeat; /* Don't repeat the image */
-  background-size: cover; /* Scale to cover the div */
-  background-position: center; /* Center the image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 170vh /*desktop*/;
   color: #FFF!important;
+  margin-bottom: 5vh;
 }
+@media screen and (max-width: 1024px) {
+	
+	.caseFbg{
+    height: 110vh /*ipad pro*/;
+    
+  }
+    
+}
+@media screen and (max-width: 900px) {
+	
+	.caseFbg{
+    height: 90vh /*ipad air*/;
+    
+  }
+    
+}
+  /**not affecting greater than 770px-**/
+@media screen and (max-width: 770px) {
+	
+	.caseFbg{
+    height: 100vh /*ipad mini*/;
+    
+  }
+    
+}
+@media screen and (max-width: 430px) {
+	
+	.caseFbg{
+    height: 70vh /*mobile*/;
+  }
+    
+}
+
+.caseFbg-A {
+  background-image: url('../images/Artboard-1.jpg');
+  
+}
+  
+
 .caseFbg-B {
   background-image: url('../images/Artboard-2.jpg');
-  background-repeat: no-repeat; /* Don't repeat the image */
-  background-size: cover; /* Scale to cover the div */
-  background-position: center; /* Center the image */
-  color: #FFF!important;
+  
 }
 .caseFbg-C {
   background-image: url('../images/Artboard-3.jpg');
-  background-repeat: no-repeat; /* Don't repeat the image */
-  background-size: cover; /* Scale to cover the div */
-  background-position: center; /* Center the image */
-  color: #FFF!important;
+  
 }
 .caseFbg-D {
   background-image: url('../images/Artboard-4.jpg');
-  background-repeat: no-repeat; /* Don't repeat the image */
-  background-size: cover; /* Scale to cover the div */
-  background-position: center; /* Center the image */
-  color: #FFF!important;
+ 
 }
 
 .caseFbg-E {
   background-image: url('../images/Artboard-5.jpg');
-  background-repeat: no-repeat; /* Don't repeat the image */
-  background-size: cover; /* Scale to cover the div */
-  background-position: center; /* Center the image */
-  color: #FFF!important;
+  
 }
 .caseFbg-F {
   background-image: url('../images/Artboard-6.jpg');
-  background-repeat: no-repeat; /* Don't repeat the image */
-  background-size: cover; /* Scale to cover the div */
-  background-position: center; /* Center the image */
-  color: #FFF!important;
+  
 }
 .caseFbg-G {
   background-image: url('../images/Artboard-7.jpg');
-  background-repeat: no-repeat; /* Don't repeat the image */
-  background-size: cover; /* Scale to cover the div */
-  background-position: center; /* Center the image */
-  color: #FFF!important;
+  
 }
 .caseFbg-H {
   background-image: url('../images/Artboard-8.jpg');
-  background-repeat: no-repeat; /* Don't repeat the image */
-  background-size: cover; /* Scale to cover the div */
-  background-position: center; /* Center the image */
-  color: #FFF!important;
+  
 }
 .caseFbg-I {
   background-image: url('../images/Artboard-9.jpg');
-  background-repeat: no-repeat; /* Don't repeat the image */
-  background-size: cover; /* Scale to cover the div */
-  background-position: center; /* Center the image */
-  color: #FFF!important;
+  
 }
-
+.dtScreen-A {
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/donatScrn-01.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
 
 /********Responsive script****/
   /**not affecting greater than 770px-**/
