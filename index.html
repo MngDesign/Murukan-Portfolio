@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Murukan Gopinathan | Senior UX Designer</title>
+  <link rel="icon" href="images/mg.svg " type="image/x-icon">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --muted: #5a5a5a;
+      --line: #f2f2f2;
+      --panel: #f7f7f7;
+      --redLn: #b30101;
+    }
+
+    * {
+      box-sizing: border-box;
+      min-width: 0;
+    }
+
+    html,
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    .page {
+      width: min(1080px, 100%);
+      margin: 14px auto 24px;
+      border-left: 1px solid var(--line);
+      border-right: 1px solid var(--line);
+    }
+
+    .row {
+      
+      display: grid;
+    }
+
+    .logo-mark {
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      font-size: 0.66rem;
+      font-weight: 600;
+      letter-spacing: 0.9px;
+      color: #333;
+      
+    }
+
+    .hero {
+      grid-template-columns: 1fr 1fr;
+      min-height: 320px;
+      margin-top: 14px;
+    }
+
+    .hero-text {
+      padding: 38px 30px;
+      border-right: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 4.5vw, 3.1rem);
+      font-weight: 500;
+      line-height: 1.15;
+      letter-spacing: 0.1px;
+    }
+
+    .subtitle {
+      margin: 14px 0 0;
+      font-size: 1.05rem;
+      color: #333;
+    }
+
+    .summary {
+      margin: 26px 0 0;
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.55;
+      max-width: 64ch;
+    }
+
+    .hero-image {
+      position: relative;
+      min-height: 320px;
+      aspect-ratio: 4 / 3;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      background-image: url("images/myportfolio-wlcm.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-image::before {
+      content: "";
+      width: 68%;
+      height: 68%;
+      border: none;
+      
+      
+    }
+
+    .hero-image span {
+      position: absolute;
+      bottom: 12px;
+      right: 14px;
+      font-size: 0.72rem;
+      color: #383838;
+      letter-spacing: 0.25px;
+     
+      
+    }
+
+    .mini-nav {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 10px 16px;
+      font-size: 0.75rem;
+      color: #444;
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      min-height: 48px;
+      background: #fff;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      width: 100%;
+    }
+
+    .mini-nav.is-fixed {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(1080px, 100%);
+      z-index: 500;
+      background: #fff;
+    }
+
+    .nav-sticky-spacer {
+      display: none;
+    }
+
+    .nav-sticky-spacer.active {
+      display: block;
+    }
+
+    .nav-sticky-sentinel {
+      height: 0;
+    }
+
+    .mini-nav .logo-mark {
+      margin-right: auto;
+      flex: 0 0 auto;
+    }
+
+    .about-intro {
+      padding: 18px 14px 12px;
+      
+    }
+
+    .about-intro h2 {
+      margin: 0 0 8px;
+      font-size: 1.35rem;
+      font-weight: 500;
+    }
+
+    .about-intro p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.5;
+      font-size: 0.92rem;
+    }
+
+    .value-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .value-card {
+      padding: 12px 14px 14px;
+      border: 1px solid var(--redLn);
+      border-radius: 12px;
+      min-height: 94px;
+      margin: 0 4px;
+    }
+
+    .value-card h3 {
+      margin: 0 0 5px;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .value-card p {
+      margin: 0;
+      font-size: 0.8rem;
+      line-height: 1.45;
+      color: var(--muted);
+    }
+
+    .projects {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .project {
+      border-right: 1px solid var(--line);
+      border-top: 1px solid var(--line);
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      background: #fff;
+    }
+
+    .project:nth-child(3n) {
+      border-right: 0;
+    }
+
+    .project:hover .project-title {
+      text-decoration: underline;
+    }
+
+    .project-thumb {
+      height: 25vh;
+      margin:  8px;
+      border-bottom: 1px solid var(--line);
+      /*filter: grayscale(1);*/
+      background-size: cover;
+      background-position: center;
+    }
+
+    .thumb-a {
+      background-image: url(images/prj-01-donation.png);
+    }
+     .thumb-aa {
+      background-image: url(images/project-01-Tn.png);
+    }
+
+    .thumb-b {
+      
+        background-image: url(images/pr-05j2.png);
+    }
+
+    .thumb-c {
+      background:
+        linear-gradient(180deg, rgba(245, 245, 245, 0.95), rgba(128, 128, 128, 0.7)),
+        repeating-linear-gradient(0deg, #eeeeee, #eeeeee 6px, #dadada 6px, #dadada 12px);
+    }
+
+    .project-body {
+      padding: 10px 12px 14px;
+    }
+
+    .project-title {
+      margin: 0;
+      font-size: 0.95rem;
+      font-weight: 500;
+      line-height: 1.35;
+    }
+
+    .project-desc {
+      margin: 8px 0 0;
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .testimonials {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .quote {
+      border-top: 1px solid var(--line);
+      border-right: 1px solid var(--line);
+      padding: 14px;
+      display: grid;
+      grid-template-columns: 95px 1fr;
+      gap: 12px;
+      align-items: center;
+      background: var(--panel);
+    }
+
+    .quote:last-child {
+      border-right: 0;
+    }
+
+    .avatar {
+      width: 95px;
+      height: 95px;
+      border: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 40% 32%, #ffffff, #bbbbbb);
+      filter: grayscale(1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .quote h3 {
+      margin: 0;
+      font-size: 0.93rem;
+      font-weight: 600;
+    }
+
+    .quote p {
+      margin: 6px 0 0;
+      font-size: 0.79rem;
+      line-height: 1.45;
+      color: var(--muted);
+    }
+
+    .bottom {
+      grid-template-columns: 1.2fr 1fr 1fr;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: #fcfcfc;
+    }
+
+    .bottom-col {
+      padding: 16px 14px;
+      border-right: 1px solid var(--line);
+      min-height: 180px;
+    }
+
+    .bottom-col:last-child {
+      border-right: 0;
+    }
+
+    .bottom-col h3 {
+      margin: 0 0 10px;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .bottom-col p,
+    .bottom-col li {
+      margin: 0;
+      font-size: 0.82rem;
+      line-height: 1.55;
+      color: #4c4c4c;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .cv-btn {
+      margin-top: 10px;
+      border: 1px solid #8c8c8c;
+      padding: 6px 12px;
+      font-size: 0.76rem;
+      color: #252525;
+      text-decoration: none;
+      display: inline-block;
+     }
+     #footer{
+
+      border-top: 1px solid #ccc;
+      background-color: #ededed;
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+     }
+     a:link {
+  color: rgb(45, 45, 45);
+  text-decoration: none; /* Removes the default underline */
+}
+
+a:visited {
+  color: rgb(42, 42, 42);
+}
+
+a:hover {
+  color: rgb(217, 2, 2);
+  text-decoration: underline; /* Adds underline on hover */
+}
+
+a:active {
+  color: rgb(113, 0, 0);
+}
+
+    @media (max-width: 900px) {
+      .page {
+        margin-top: 0;
+        border-left: 0;
+        border-right: 0;
+      }
+
+      .hero,
+      .value-grid,
+      .projects,
+      .testimonials,
+      .bottom {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-text,
+      .project,
+      .quote,
+      .bottom-col {
+        border-right: 0;
+      }
+
+      .hero-image {
+        min-height: 260px;
+        aspect-ratio: 16 / 10;
+      }
+
+      .mini-nav {
+        padding: 10px 14px;
+        gap: 14px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-text {
+        padding: 24px 16px;
+      }
+
+      .about-intro,
+      .value-card,
+      .project-body,
+      .bottom-col,
+      .quote {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+
+      .hero-image {
+        min-height: 220px;
+        aspect-ratio: 3 / 2;
+      }
+
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="nav-sticky-sentinel" aria-hidden="true"></div>
+    <div class="mini-nav">
+      <span class="logo-mark"><img src="images/mg.svg"></span>
+      <span><a href="#abt">About</a></span>
+      <span><a href="#prj">Projects</a></span>
+      <span><a href="#footer">Contact</a></span>
+    </div>
+    <div class="nav-sticky-spacer" aria-hidden="true"></div>
+
+    <section class="row hero">
+      <div class="hero-text">
+        <h1>Hello,<br>I’m Murukan</h1>
+        <p class="subtitle">A Senior UX designer with 15 years of industry experience.</p>
+        <p class="summary">
+          I design scalable, user-first  product experiences that align business goals with real user needs. 
+          From research to delivery, I design end-to-end solutions across enterprise platforms, mobile apps, and web products.
+          
+        </p>
+      </div>
+      <div class="hero-image">
+        <span></span>
+      </div>
+    </section>
+
+    <section class="about-intro">
+      <h2>Why you should work with me</h2>
+      <p>I create practical UX solutions, collaborate deeply with teams, and focus on measurable outcomes.</p>
+    </section>
+
+    <section class="row value-grid">
+      <article class="value-card">
+        <h3>I get things done (Done well in time)</h3>
+        <p>I deliver clear, actionable UX that helps teams move forward quickly and confidently.</p>
+      </article>
+      <article class="value-card">
+        <h3>Leads with collaboration, not ego.</h3>
+        <p>I enjoy close collaboration with PMs, developers, and business stakeholders.</p>
+      </article>
+      <article class="value-card">
+        <h3>Problems into solutions is what I do best.</h3>
+        <p>I break down complex workflows into simpler, usable interfaces and design systems.</p>
+      </article>
+    </section>
+    <section class="about-intro" id="prj">
+      <h2>Case studies</h2>
+      <p>Some of my recent work</p>
+    </section>
+
+    <section class="row projects">
+      <a class="project" href="case-studies/donation.html">
+        <div class="project-thumb thumb-a"></div>
+        <div class="project-body">
+          <h3 class="project-title">Quick Donation Experience</h3>
+          <p class="project-desc">New design</p>
+        </div>
+      </a>
+      <a class="project" href="case-studies/maritime-erp.html">
+        <div class="project-thumb thumb-aa"></div>
+        <div class="project-body">
+          <h3 class="project-title">Maritime ERP platform redesign</h3>
+          <p class="project-desc">Reworked information architecture and interaction models for enterprise users.</p>
+        </div>
+      </a>
+      <a class="project" href="case-studies/telecom-ops.html">
+        <div class="project-thumb thumb-b"></div>
+        <div class="project-body">
+          <h3 class="project-title">Telecom operations UX</h3>
+          <p class="project-desc">Improved implementation and review flows for operational efficiency.</p>
+        </div>
+      </a>
+    </section>
+
+    <section class="row testimonials">
+      <article class="quote">
+        <div class="avatar">AT&T</div>
+        <div>
+          <h3>Product Partner Feedback</h3>
+          <p>“Murukan consistently converts complex requirements into practical and user-friendly design outcomes.”</p>
+        </div>
+      </article>
+      <article class="quote">
+        <div class="avatar">SVM</div>
+        <div>
+          <h3>Engineering Partner Feedback</h3>
+          <p>“Strong collaboration and clean design handoffs helped our delivery and reduced implementation rework.”</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="row bottom">
+      <div class="bottom-col" id="abt">
+        <h3>About me</h3>
+        <p>
+          I am specialized in delivering user-centered enterprise experiences. My work covers UX strategy,
+          research, prototyping, usability testing and scalable interface design.
+        </p>
+      </div>
+      <div class="bottom-col">
+        <h3>Expert software</h3>
+        <ul>
+          <li>Figma</li>
+          <li>Figma Make AI</li>
+          <li>Adobe XD</li>
+          <li>Adobe Illustrator</li>
+          <li>Photoshop</li>
+          <li>Open AI Codex</li>
+          <li>Visual studioa</li>
+          <li>HTML / CSS</li>
+          <li>Usability testing tools</li>
+        </ul>
+      </div>
+      <div class="bottom-col">
+        <h3>Work experience</h3>
+        <p>Senior UX Designer with experience in Solverminds, Sapiens, and IBM India.</p>
+        <a class="cv-btn" href="pdf/Resume-Murukan-2026-v1.pdf">CV</a>
+      </div>
+    </section>
+    <section class="row testimonials" id="footer">
+      <article class="">
+        
+        <div>
+          <h3></h3>
+          <p>Mob: 9986330787     /     8073795328     Email: mkbs3315@gmail.com    </p>
+        </div>
+      </article>
+    </section>
+  </main>
+  <script>
+    (function () {
+      var nav = document.querySelector('.mini-nav');
+      var spacer = document.querySelector('.nav-sticky-spacer');
+      var sentinel = document.querySelector('.nav-sticky-sentinel');
+      if (!nav || !spacer || !sentinel) return;
+      var isFixed = false;
+      var ticking = false;
+
+      function setFixed(nextFixed) {
+        if (nextFixed === isFixed) return;
+        isFixed = nextFixed;
+
+        if (isFixed) {
+          spacer.style.height = nav.offsetHeight + 'px';
+          spacer.classList.add('active');
+          nav.classList.add('is-fixed');
+        } else {
+          nav.classList.remove('is-fixed');
+          spacer.classList.remove('active');
+          spacer.style.height = '0px';
+        }
+      }
+
+      function updateSticky() {
+        var shouldFix = sentinel.getBoundingClientRect().top <= 0;
+        setFixed(shouldFix);
+      }
+
+      function onScroll() {
+        if (ticking) return;
+        ticking = true;
+        window.requestAnimationFrame(function () {
+          updateSticky();
+          ticking = false;
+        });
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', updateSticky);
+      updateSticky();
+    })();
+  </script>
+</body>
+</html>
