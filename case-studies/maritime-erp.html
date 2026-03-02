@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maritime ERP Platform Redesign | Murukan Gopinathan</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --muted: #575757;
+      --line: #c8c8c8;
+      --panel: #f6f6f6;
+    }
+
+    * {
+      box-sizing: border-box;
+      min-width: 0;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    .page {
+      width: min(1080px, 100%);
+      margin: 0 auto;
+      border-left: 1px solid var(--line);
+      border-right: 1px solid var(--line);
+    }
+
+    .top {
+      border-bottom: 1px solid var(--line);
+      padding: 16px 20px;
+    }
+
+    .back {
+      color: #222;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      border-bottom: 1px solid var(--line);
+      padding: 26px;
+      background: #fbfbfb;
+    }
+
+    .hero-frame {
+      height: 360px;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(140deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.03)),
+        repeating-linear-gradient(90deg, #f2f2f2, #f2f2f2 10px, #e5e5e5 10px, #e5e5e5 20px);
+      display: grid;
+      place-items: center;
+      color: #595959;
+      font-size: 0.82rem;
+    }
+
+    .title-row {
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 1fr 240px;
+    }
+
+    .title-main {
+      padding: 18px 20px;
+      border-right: 1px solid var(--line);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .title-meta {
+      padding: 18px 16px;
+      background: #fcfcfc;
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .row {
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 320px 1fr;
+    }
+
+    .label {
+      border-right: 1px solid var(--line);
+      padding: 24px 20px;
+      background: var(--panel);
+      font-size: 2rem;
+      line-height: 1.2;
+      font-weight: 300;
+    }
+
+    .content {
+      padding: 24px 22px;
+      color: #252525;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .content p {
+      margin: 0 0 14px;
+    }
+
+    .content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .gallery {
+      border-bottom: 1px solid var(--line);
+      padding: 18px 20px 24px;
+    }
+
+    .gallery h2 {
+      margin: 0 0 14px;
+      font-size: 1.9rem;
+      font-weight: 400;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .shot {
+      height: 180px;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(160deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.04)),
+        repeating-linear-gradient(0deg, #f2f2f2, #f2f2f2 8px, #e7e7e7 8px, #e7e7e7 16px);
+    }
+    .imageCvrHldr{
+      background-image: url(../images/g2o-img-12-raw.png);
+      background-size: cover;
+      height: 50vh;
+    }
+
+    @media (max-width: 900px) {
+      .page {
+        border-left: 0;
+        border-right: 0;
+      }
+
+      .title-row,
+      .row {
+        grid-template-columns: 1fr;
+      }
+
+      .title-main,
+      .label {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .label {
+        font-size: 1.5rem;
+        padding: 16px;
+      }
+
+      .hero-frame {
+        height: 240px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="top">
+      <a class="back" href="../index.html">← Back</a>
+    </div>
+
+    <section class="hero">
+      <div class="imageCvrHldr">
+        
+      </div>
+    </section>
+
+    <section class="title-row">
+      <div class="title-main">
+        <h1>The Complex Problem of Maritime ERP Rescheduling</h1>
+      </div>
+      <aside class="title-meta">
+        <strong>Role:</strong> Senior UX Designer<br>
+        <strong>Domain:</strong> Maritime Logistics<br>
+        <strong>Duration:</strong> 2021-2025
+      </aside>
+    </section>
+
+    <section class="row">
+      <div class="label">What is this product?</div>
+      <div class="content">
+        <p>The platform helps the team efficiently manage cargo distribution, optimize vessel performance, 
+          and ensure safe and compliant voyages.</p>
+      </div>
+    </section>
+
+    <section class="row">
+      <div class="label">
+        Challenges
+
+      </div>
+      <div class="content">
+        <ul>
+            <li>The old website lacked User first approah and responsiveness in various devices.</li>
+
+            <li>Users require a single unified platform to access all necessary information, instead of relying on multiple sources such as emails, spreadsheets, and weather reports.</li>
+
+            <li>Users also need visual plans, including 2D/3D representations of tier layouts, and the ability to view them 
+            live in the real-world context.</li>
+        </ul>
+      </div>
+    </section>
+    <section class="row">
+      <div class="label">Solution</div>
+      <div class="content">
+        <p>To give shape to our client’s vision, we conducted a series of product workshops to align business goals, 
+          user needs, and technical feasibility. Through iterative UX/UI design processes, we transformed conceptual 
+          ideas into tangible experiences. The engagement concluded with the delivery of high-fidelity interactive prototypes 
+          that accurately reflected the final product vision.
+        </p>
+
+        
+          <ul>
+            <li> First-Class User Experience I focused on creating a clean, intuitive, and user-centered interface. The design ensured seamless navigation, consistent interactions, 
+              and visual harmony—enhancing user satisfaction and reducing friction across key user journeys.
+            </li>
+
+                <li>Increased User Engagement By simplifying workflows, improving task visibility, and introducing interactive data visuals, users could complete actions faster and with more confidence. Gamified micro-interactions and personalized dashboards further encouraged continued engagement.
+
+                </li>
+
+                <li>Streamlined Information Flow A unified design system and information architecture made it easier for users to access data from various sources in one place—reducing dependency on emails, spreadsheets, and manual updates.
+
+                </li>
+
+                <li>Enhanced Business Alignment The UX strategy was closely tied to business KPIs—supporting brand consistency, operational efficiency, and monetization goals.
+
+                </li>
+                <li>Scalable Design Framework A modular component library was developed, ensuring scalability and design consistency for future product updates.
+                  
+                </li>
+          </ul>
+        
+      </div>
+    </section>
+
+    <section class="row">
+      <div class="label">Outcome</div>
+      <div class="content">
+        <p>The new website has helped the company elevate its digital presence and strengthen customer trust. 
+          By aligning user needs with business goals, the redesigned platform delivered measurable improvements across multiple areas.
+          <ul>
+            <li>Improved User Engagement: Users now spend significantly more time exploring key sections of the website, thanks to intuitive navigation and clear content hierarchy.</li>
+
+                <li>Enhanced Brand Perception: The modern, visually cohesive design reinforces brand identity and credibility, leading to higher customer confidence and satisfaction.</li>
+
+                <li>Higher Conversion and Retention Rates: Streamlined user flows and engaging CTAs have reduced drop-offs and encouraged repeat visits.</li>
+
+                <li>Operational Efficiency: Centralized information architecture and optimized content management have simplified internal updates and reduced maintenance effort.</li>
+          </ul>
+        </p>
+      </div>
+    </section>
+    <section class="row">
+      <div class="label">Detailed reserch report</div>
+      <div class="content">
+        <a href="../files/pf25-project-1.html" target="_blank">
+          Please click here to see the detailed Case study
+        </a>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <h2></h2>
+      <div class="gallery-grid">
+        
+      </div>
+    </section>
+  </main>
+</body>
+</html>

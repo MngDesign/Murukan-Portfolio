@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise Mobile App Modernization | Murukan Gopinathan</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --muted: #575757;
+      --line: #c8c8c8;
+      --panel: #f6f6f6;
+    }
+
+    * {
+      box-sizing: border-box;
+      min-width: 0;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    .page {
+      width: min(1080px, 100%);
+      margin: 0 auto;
+      border-left: 1px solid var(--line);
+      border-right: 1px solid var(--line);
+    }
+
+    .top {
+      border-bottom: 1px solid var(--line);
+      padding: 16px 20px;
+    }
+
+    .back {
+      color: #222;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      border-bottom: 1px solid var(--line);
+      padding: 26px;
+      background: #fbfbfb;
+    }
+
+    .hero-frame {
+      height: 360px;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(140deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.03)),
+        repeating-linear-gradient(90deg, #f2f2f2, #f2f2f2 10px, #e5e5e5 10px, #e5e5e5 20px);
+      display: grid;
+      place-items: center;
+      color: #595959;
+      font-size: 0.82rem;
+    }
+
+    .title-row {
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 1fr 240px;
+    }
+
+    .title-main {
+      padding: 18px 20px;
+      border-right: 1px solid var(--line);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .title-meta {
+      padding: 18px 16px;
+      background: #fcfcfc;
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .row {
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 320px 1fr;
+    }
+
+    .label {
+      border-right: 1px solid var(--line);
+      padding: 24px 20px;
+      background: var(--panel);
+      font-size: 2rem;
+      line-height: 1.2;
+      font-weight: 300;
+    }
+
+    .content {
+      padding: 24px 22px;
+      color: #252525;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .content p {
+      margin: 0 0 14px;
+    }
+
+    .content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .gallery {
+      border-bottom: 1px solid var(--line);
+      padding: 18px 20px 24px;
+    }
+
+    .gallery h2 {
+      margin: 0 0 14px;
+      font-size: 1.9rem;
+      font-weight: 400;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .shot {
+      height: 180px;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(160deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.04)),
+        repeating-linear-gradient(0deg, #f2f2f2, #f2f2f2 8px, #e7e7e7 8px, #e7e7e7 16px);
+    }
+
+    @media (max-width: 900px) {
+      .page {
+        border-left: 0;
+        border-right: 0;
+      }
+
+      .title-row,
+      .row {
+        grid-template-columns: 1fr;
+      }
+
+      .title-main,
+      .label {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .label {
+        font-size: 1.5rem;
+        padding: 16px;
+      }
+
+      .hero-frame {
+        height: 240px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="top">
+      <a class="back" href="../index.html">← Back</a>
+    </div>
+
+    <section class="hero">
+      <div class="hero-frame">Mobile Modernization Prototype Snapshot</div>
+    </section>
+
+    <section class="title-row">
+      <div class="title-main">
+        <h1>Modernizing Enterprise Mobile Workflows</h1>
+      </div>
+      <aside class="title-meta">
+        <strong>Role:</strong> UX Designer<br>
+        <strong>Domain:</strong> Enterprise Mobile<br>
+        <strong>Focus:</strong> Task Speed &amp; Usability
+      </aside>
+    </section>
+
+    <section class="row">
+      <div class="label">What is this product?</div>
+      <div class="content">
+        <p>This case study covers the modernization of a legacy enterprise mobile application used for daily, high-frequency operational tasks.</p>
+        <p>The old interface patterns were visually dated and interaction-heavy, causing avoidable effort and slower completion for core actions.</p>
+      </div>
+    </section>
+
+    <section class="row">
+      <div class="label">The brief</div>
+      <div class="content">
+        <p>The challenge was to keep business rules intact while reducing cognitive load and improving mobile usability.</p>
+        <p>I redesigned flow sequences, simplified information grouping, and defined reusable mobile components for faster implementation consistency.</p>
+      </div>
+    </section>
+
+    <section class="row">
+      <div class="label">Outcome</div>
+      <div class="content">
+        <p>The updated UX improved learnability and reduced repetitive user effort, while giving teams a cleaner design system baseline for future features.</p>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <h2>Key screens and refinements</h2>
+      <div class="gallery-grid">
+        <div class="shot"></div>
+        <div class="shot"></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

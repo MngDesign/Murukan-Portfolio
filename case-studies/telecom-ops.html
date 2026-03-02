@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telecom Operations UX | Murukan Gopinathan</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --muted: #575757;
+      --line: #c8c8c8;
+      --panel: #f6f6f6;
+    }
+
+    * {
+      box-sizing: border-box;
+      min-width: 0;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    .page {
+      width: min(1080px, 100%);
+      margin: 0 auto;
+      border-left: 1px solid var(--line);
+      border-right: 1px solid var(--line);
+    }
+
+    .top {
+      border-bottom: 1px solid var(--line);
+      padding: 16px 20px;
+    }
+
+    .back {
+      color: #222;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      border-bottom: 1px solid var(--line);
+      padding: 26px;
+      background: #fbfbfb;
+    }
+
+    .hero-frame {
+      height: 360px;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(140deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.03)),
+        repeating-linear-gradient(90deg, #f2f2f2, #f2f2f2 10px, #e5e5e5 10px, #e5e5e5 20px);
+      display: grid;
+      place-items: center;
+      color: #595959;
+      font-size: 0.82rem;
+    }
+
+    .title-row {
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 1fr 240px;
+    }
+
+    .title-main {
+      padding: 18px 20px;
+      border-right: 1px solid var(--line);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .title-meta {
+      padding: 18px 16px;
+      background: #fcfcfc;
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .row {
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 320px 1fr;
+    }
+
+    .label {
+      border-right: 1px solid var(--line);
+      padding: 24px 20px;
+      background: var(--panel);
+      font-size: 2rem;
+      line-height: 1.2;
+      font-weight: 300;
+    }
+
+    .content {
+      padding: 24px 22px;
+      color: #252525;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .content p {
+      margin: 0 0 14px;
+    }
+
+    .content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .gallery {
+      border-bottom: 1px solid var(--line);
+      padding: 18px 20px 24px;
+    }
+
+    .gallery h2 {
+      margin: 0 0 14px;
+      font-size: 1.9rem;
+      font-weight: 400;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 12px;
+    }
+
+    .shot {
+      background-size: cover;
+      height: 90vh;
+      border: 1px solid var(--line);
+      
+    }
+    .shot-img1 {
+      background-image:url(../images/pr-03a.jpg);
+    }
+    .shot-img2 {
+      background-image:url(../images/pr-03b.jpg);
+    }
+    .shot-img3 {
+      background-image:url(../images/pr-03c.jpg);
+    }
+    .shot-img4 {
+      background-image:url(../images/pr-03d.jpg);
+    }
+    .shot-img5 {
+      background-image:url(../images/pr-04c.jpg);
+    }
+    .shot-img6 {
+      background-image:url(../images/pr-04d.jpg);
+    }
+    .shot-img7 {
+      background-image:url(../images/pr-04e.jpg);
+    }
+    .shot-img8{
+      background-image:url(../images/pr-04f.jpg);
+    }
+    .shot-img9 {
+      background-image:url(../images/pr-05i.jpg);
+    }
+    .shot-img11 {
+      background-image:url(../images/pr-05j.jpg);
+    }
+    .shot-img12 {
+      background-image:url(../images/pr-05i.jpg);
+    }
+    .shot-img13 {
+      background-image:url(../images/pr-05i.jpg);
+    }
+    .shot-img14 {
+      background-image:url(../images/pr-05i.jpg);
+    }
+    .shot-img15 {
+      background-image:url(../images/pr-05j.jpg);
+    }
+    .shot-img16 {
+      background-image:url(../images/pr-06a.jpg);
+    }
+    .shot-img17 {
+      background-image:url(../images/pr-09e.jpg);
+    }
+    .shot-img18 {
+      background-image:url(../images/pr-09f.jpg);
+    }
+    .imageCvrHldr{
+      background-image: url(../images/tel-01.png);
+      background-size: cover;
+      height: 50vh;
+    }
+   
+    
+
+    @media (max-width: 900px) {
+      .page {
+        border-left: 0;
+        border-right: 0;
+      }
+
+      .title-row,
+      .row {
+        grid-template-columns: 1fr;
+      }
+
+      .title-main,
+      .label {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .label {
+        font-size: 1.5rem;
+        padding: 16px;
+      }
+
+      .hero-frame {
+        height: 240px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+      .shot-img1 {
+        height: 30vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="top">
+      <a class="back" href="../index.html">← Back</a>
+    </div>
+
+    <section class="hero">
+      <div class="imageCvrHldr"></div>
+    </section>
+
+    <section class="title-row">
+      <div class="title-main">
+        <h1>Improving Telecom Operations Through Better UX</h1>
+      </div>
+      <aside class="title-meta">
+        <strong>Role:</strong> UX Designer<br>
+        <strong>Domain:</strong> Telecom Operations<br>
+        <strong>Org:</strong> IBM India (AT&amp;T)
+      </aside>
+    </section>
+
+    <section class="row">
+      <div class="label">What is this product?</div>
+      <div class="content">
+        <p>This case study covers internal telecom operations tools used for implementation planning, reviews, and operational coordination.</p>
+        <p>The interface handled high-stakes workflows, where missing information or unclear states created delays and handoff issues.</p>
+      </div>
+    </section>
+
+    <section class="row">
+      <div class="label">The brief</div>
+      <div class="content">
+        <p>The objective was to reduce friction in multi-step flows and improve confidence during critical operational decisions.</p>
+        <p>I simplified screen hierarchy, tightened action grouping, and improved visibility of status changes across related views.</p>
+      </div>
+    </section>
+
+    <section class="row">
+      <div class="label">Outcome</div>
+      <div class="content">
+        <p>The redesign improved flow readability and reduced confusion during implementation and review tasks, helping teams move faster with fewer rework cycles.</p>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <h2>Key interface improvements</h2>
+      <div class="gallery-grid">
+        <div class=" shot shot-img1"></div>
+        <div class="shot shot-img2"></div>
+        <div class="shot shot-img3"></div>
+        <div class="shot shot-img4"></div>
+        <div class="shot shot-img5"></div>
+        <div class="shot shot-img6"></div>
+        <div class="shot shot-img7"></div>
+        <div class="shot shot-img8"></div>
+        
+        <div class="shot shot-img11"></div>
+       
+        <div class="shot shot-img13"></div>
+        
+        <div class="shot shot-img16"></div>
+        <div class="shot shot-img17"></div>
+        <div class="shot shot-img18"></div>
+        
+        
+      </div>
+    </section>
+  </main>
+</body>
+</html>
