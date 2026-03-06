@@ -1,1 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GiveFlow | Reassuring Donation Experience</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-1" aria-hidden="true"></div>
+    <div class="bg-orb orb-2" aria-hidden="true"></div>
 
+    <header class="container site-header">
+      <a class="logo" href="#">GiveFlow</a>
+      <nav class="main-nav">
+        <a href="#impact">Impact</a>
+        <a href="#stories">Stories</a>
+        <a href="#trust">Trust</a>
+      </nav>
+      <button class="btn btn-outline">Track My Donations</button>
+    </header>
+
+    <main class="container layout">
+      <section class="hero-card" id="stories">
+        <p class="eyebrow">Empathy to Action</p>
+        <h1>Your 2-minute donation can fund a full learning day.</h1>
+        <p class="hero-copy">
+          Built for busy professionals: one calm flow, clear impact, and total
+          transparency. You donate quickly and still feel exactly where your
+          contribution goes.
+        </p>
+
+        <div class="story-highlight">
+          <h3>Impact Story</h3>
+          <p>
+            Last month, contributions like yours helped Asha's classroom
+            receive tablets and meals for 42 students. Attendance rose by 28%
+            in 3 weeks.
+          </p>
+        </div>
+
+        <div class="stats" id="impact">
+          <article>
+            <h3>12,480</h3>
+            <p>Children supported</p>
+          </article>
+          <article>
+            <h3>94%</h3>
+            <p>Funds to programs</p>
+          </article>
+          <article>
+            <h3>4.9/5</h3>
+            <p>Donor trust rating</p>
+          </article>
+        </div>
+
+        <div class="progress-wrap" aria-label="Fundraising progress">
+          <div class="progress-meta">
+            <span>Current mission goal: $650,000</span>
+            <span>81% complete</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill"></div>
+          </div>
+        </div>
+
+        <div class="trust-panel" id="trust">
+          <h3>Trust Signals</h3>
+          <ul>
+            <li>Audited monthly financial reports.</li>
+            <li>Secure encrypted payments.</li>
+            <li>Live impact dashboard updated every 24 hours.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="donation-card">
+        <div class="flow-header">
+          <div>
+            <h2>Donate With Confidence</h2>
+            <p>3 simple steps. Usually under 2 minutes.</p>
+          </div>
+          <span class="step-label" id="stepLabel">Step 1 of 3</span>
+        </div>
+
+        <div class="stepper" aria-hidden="true">
+          <span class="step-dot active"></span>
+          <span class="step-dot" id="dot2"></span>
+          <span class="step-dot" id="dot3"></span>
+        </div>
+
+        <div class="step active" id="step1">
+          <label class="field">
+            <span>Choose Frequency</span>
+            <div class="toggle-row" role="tablist" aria-label="Donation type">
+              <button class="toggle active" data-frequency="one-time">
+                One-Time
+              </button>
+              <button class="toggle" data-frequency="monthly">Monthly</button>
+            </div>
+          </label>
+
+          <div class="amount-grid">
+            <button class="amount active" data-amount="25">$25</button>
+            <button class="amount" data-amount="50">$50</button>
+            <button class="amount" data-amount="100">$100</button>
+            <button class="amount" data-amount="250">$250</button>
+          </div>
+
+          <label class="field">
+            <span>Custom Amount (USD)</span>
+            <input id="customAmount" type="number" min="1" value="25" />
+          </label>
+
+          <div class="impact-preview">
+            <h4>This donation could provide:</h4>
+            <p id="impactText">School meals for 10 students this week.</p>
+          </div>
+        </div>
+
+        <div class="step" id="step2">
+          <label class="field">
+            <span>Select Cause</span>
+            <select id="cause">
+              <option value="Books & Supplies">Books & Supplies</option>
+              <option value="School Meals">School Meals</option>
+              <option value="Teacher Training">Teacher Training</option>
+              <option value="Digital Access">Digital Access</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Your Email</span>
+            <input id="email" type="email" placeholder="you@example.com" />
+          </label>
+
+          <label class="field checkbox">
+            <input type="checkbox" id="updates" checked />
+            <span>Send monthly impact updates (recommended)</span>
+          </label>
+        </div>
+
+        <div class="step" id="step3">
+          <div class="summary">
+            <p id="summaryText">$25 one-time for Books & Supplies</p>
+          </div>
+
+          <div class="transparency-card">
+            <h4>Where your money goes</h4>
+            <ul>
+              <li>84% Direct program support</li>
+              <li>10% Operations and delivery</li>
+              <li>6% Safety, compliance, and reporting</li>
+            </ul>
+          </div>
+
+          <label class="field">
+            <span>Card Number</span>
+            <input id="cardNumber" type="text" placeholder="4242 4242 4242 4242" />
+          </label>
+
+          <div class="payment-grid">
+            <label class="field">
+              <span>Expiry</span>
+              <input id="expiry" type="text" placeholder="MM/YY" />
+            </label>
+            <label class="field">
+              <span>CVC</span>
+              <input id="cvc" type="text" placeholder="123" />
+            </label>
+          </div>
+
+          <p class="security-note">
+            Secure checkout powered by 256-bit encryption.
+          </p>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-outline" id="backBtn" disabled>Back</button>
+          <button class="btn btn-primary" id="nextBtn">Continue</button>
+        </div>
+      </section>
+    </main>
+
+    <section class="container impact-strip">
+      <article>
+        <h4>Completion Goal</h4>
+        <p>+30-40%</p>
+      </article>
+      <article>
+        <h4>Faster Donations</h4>
+        <p>-35%</p>
+      </article>
+      <article>
+        <h4>Emotional Satisfaction</h4>
+        <p>+90%</p>
+      </article>
+    </section>
+
+    <section class="modal" id="gratitudeModal" aria-hidden="true">
+      <div class="modal-card">
+        <p class="eyebrow">Gratitude</p>
+        <h3>Thank you. Your kindness is now in motion.</h3>
+        <p id="confirmText">
+          You donated $25 one-time for Books & Supplies. Your receipt has been
+          sent and impact updates are on the way.
+        </p>
+        <button class="btn btn-primary" id="doneBtn">Done</button>
+      </div>
+    </section>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
