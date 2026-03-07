@@ -1,1 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sales Analytics Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="brand">SI</div>
 
+        <nav class="side-nav">
+          <button class="side-btn active" aria-label="Dashboard">▦</button>
+          <button class="side-btn" aria-label="Trends">⌁</button>
+          <button class="side-btn" aria-label="Sales">◌</button>
+          <button class="side-btn" aria-label="Targets">◎</button>
+          <button class="side-btn" aria-label="Reports">◫</button>
+          <button class="side-btn" aria-label="Regions">◍</button>
+          <button class="side-btn" aria-label="Documents">▤</button>
+        </nav>
+
+        <button class="side-btn settings" aria-label="Settings">⚙</button>
+      </aside>
+
+      <main class="dashboard">
+        <header class="card header-card">
+          <h1>Sales Intelligence Dashboard</h1>
+          <div class="header-filters">
+            <button>Last 30 Days</button>
+            <button>All Regions</button>
+            <button>All Products</button>
+          </div>
+        </header>
+
+        <section class="kpi-grid">
+          <article class="card kpi-card">
+            <div class="kpi-icon blue">$</div>
+            <span class="badge positive">+12.5%</span>
+            <p>Total Revenue</p>
+            <h3>$2.4M</h3>
+          </article>
+
+          <article class="card kpi-card">
+            <div class="kpi-icon green">↗</div>
+            <span class="badge positive">+3.1%</span>
+            <p>Sales Growth</p>
+            <h3>18.2%</h3>
+          </article>
+
+          <article class="card kpi-card">
+            <div class="kpi-icon purple">◈</div>
+            <span class="badge positive">+24</span>
+            <p>Active Deals</p>
+            <h3>342</h3>
+          </article>
+
+          <article class="card kpi-card">
+            <div class="kpi-icon orange">◎</div>
+            <span class="badge negative">-2.3%</span>
+            <p>Conversion Rate</p>
+            <h3>24.8%</h3>
+          </article>
+        </section>
+
+        <section class="grid-top">
+          <article class="card panel large">
+            <div class="panel-head">
+              <h2>Revenue Trends</h2>
+              <p>Monthly revenue vs target performance</p>
+            </div>
+            <div class="chart-wrap h-320">
+              <canvas id="revenueLineChart"></canvas>
+            </div>
+          </article>
+
+          <article class="card panel">
+            <div class="panel-head">
+              <h2>Sales Funnel</h2>
+              <p>Conversion pipeline overview</p>
+            </div>
+            <div class="chart-wrap h-320">
+              <canvas id="funnelChart"></canvas>
+            </div>
+          </article>
+        </section>
+
+        <section class="grid-mid">
+          <article class="card panel">
+            <div class="panel-head">
+              <h2>Sales by Product Category</h2>
+              <p>Product performance breakdown</p>
+            </div>
+            <div class="chart-wrap h-280">
+              <canvas id="productBarChart"></canvas>
+            </div>
+          </article>
+
+          <article class="card panel">
+            <div class="panel-head">
+              <h2>Regional Performance</h2>
+              <p>Sales distribution by geographic region</p>
+            </div>
+            <div class="chart-wrap h-280">
+              <canvas id="regionSalesChart"></canvas>
+            </div>
+          </article>
+
+          <article class="card panel insights-panel">
+            <div class="panel-head">
+              <h2>AI Insights</h2>
+              <p>Powered by machine learning</p>
+            </div>
+            <div id="insightsList" class="insights-list"></div>
+            <button class="insights-btn">View All Insights</button>
+          </article>
+        </section>
+
+        <section class="card panel table-panel">
+          <div class="panel-head">
+            <h2>Recent Opportunities</h2>
+            <p>Deal activity snapshot</p>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Opportunity</th>
+                  <th>Region</th>
+                  <th>Stage</th>
+                  <th>Owner</th>
+                  <th>Value</th>
+                  <th>Probability</th>
+                </tr>
+              </thead>
+              <tbody id="salesTableBody"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
