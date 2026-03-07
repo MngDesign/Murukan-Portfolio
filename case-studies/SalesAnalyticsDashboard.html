@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../images/mg.svg " type="image/x-icon">
+  <title>Quick Donation App | Murukan Gopinathan</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --muted: #575757;
+      --line: #c8c8c8;
+      --panel: #f6f6f6;
+    }
+
+    * {
+      box-sizing: border-box;
+      min-width: 0;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    .page {
+      width: min(1080px, 100%);
+      margin: 0 auto;
+      border-left: 1px solid var(--line);
+      border-right: 1px solid var(--line);
+    }
+
+    .top {
+      border-bottom: 1px solid var(--line);
+      padding: 16px 20px;
+    }
+
+    .back {
+      color: #222;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      border-bottom: 1px solid var(--line);
+      padding: 26px;
+      background: #fbfbfb;
+    }
+
+    .hero-frame {
+      min-height: 320px;
+      aspect-ratio: 16 / 9;
+      border: 1px solid var(--line);
+      background: #f8f8f8;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+
+    .hero-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .title-row {
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 1fr 240px;
+    }
+
+    .title-main {
+      padding: 18px 20px;
+      border-right: 1px solid var(--line);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .title-meta {
+      padding: 18px 16px;
+      background: #fcfcfc;
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .row {
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 320px 1fr;
+    }
+
+    .label {
+      border-right: 1px solid var(--line);
+      padding: 24px 20px;
+      background: var(--panel);
+      font-size: 2rem;
+      line-height: 1.2;
+      font-weight: 300;
+    }
+
+    .content {
+      padding: 24px 22px;
+      color: #252525;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .content p {
+      margin: 0 0 14px;
+    }
+
+    .content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .gallery {
+      border-bottom: 1px solid var(--line);
+      padding: 18px 20px 24px;
+    }
+
+    .gallery h2 {
+      margin: 0 0 14px;
+      font-size: 1.9rem;
+      font-weight: 400;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .shot {
+      height: 180px;
+      
+        
+    }
+    .shoter {
+      height: auto;
+      
+        
+    }
+    .txtbgPrd{
+      background-color: #ffe1e1;
+    }
+    .txtbggreen{
+      background-color: #cdffed;
+    }
+    .iconExplainer{
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .iconExplainer span {
+      margin-right: 12px;
+    }
+    
+    @media (max-width: 900px) {
+      .page {
+        border-left: 0;
+        border-right: 0;
+      }
+
+      .title-row,
+      .row {
+        grid-template-columns: 1fr;
+      }
+
+      .title-main,
+      .label {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .label {
+        font-size: 1.5rem;
+        padding: 16px;
+      }
+
+      .hero-frame {
+        min-height: 260px;
+        aspect-ratio: 4 / 3;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .hero-frame {
+        min-height: 220px;
+        aspect-ratio: 1 / 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="top">
+      <a class="back" href="../index.html">← Back</a>
+    </div>
+
+    <section class="hero">
+      <div class="hero-frame">
+        <img src="../images/0-sid-lt-01.png" alt="Donation case study hero image">
+      </div>
+    </section>
+
+    <section class="title-row">
+      <div class="title-main">
+        <h1>AI-Assisted Sales Intelligence Dashboard</h1>
+      </div>
+      <aside class="title-meta">
+        <strong>Role:</strong> Senior UX Designer / UX Research<br>
+        <strong>Domain:</strong>Data Visualization Design <br>
+        <strong>Tools:</strong> AI-assisted prototyping using Figma and OpenAI Codex
+      </aside>
+    </section>
+
+    <section class="row">
+      <div class="label">What is this product?</div>
+      <div class="content">
+       
+        <p>Designing a data visualization dashboard that helps sales teams quickly understand performance, trends, and opportunities.</p>
+         
+      </div>
+    </section>
+
+    <section class="row">
+      <div class="label">Goal</div>
+      <div class="content">
+        <p>Transform complex sales data into clear, decision-ready insights.</p>
+      </div>
+    </section>
+
+    <section class="row">
+      <div class="label">Problem</div>
+      <div class="content">
+        <p>Sales managers often struggle with:
+          <ul>
+            <li>Too many spreadsheets</li>
+            <li>Difficult-to-interpret reports</li>
+            <li>Delayed insights for decision making</li>
+          </ul>
+        </p>
+          
+      </div>
+    </section>
+    <section class="row">
+      <div class="label">Opportunity</div>
+      <div class="content">
+        <p>Design a simple analytics dashboard that helps users quickly answer:
+          <ul>
+            <li>Which products perform best?</li>
+            <li>Which region is declining?</li>
+            <li>Where should we focus sales effort?</li>
+          </ul>
+        </p>
+          
+      </div>
+    </section>
+
+    <section class="gallery">
+      <h2>1. UX Strategy</h2>
+      <div class="gallery-grid">
+        
+        <div class="shoter"></div>
+      </div>
+    </section>
+    <section class="row">
+      <div class="label">Key UX Principles</div>
+      <div class="content">
+        1. Data Hierarchy</br>
+        <ul>
+            <li>Most important metrics first.</li>
+        </ul>
+        2. Scan-Friendly Layout
+        <ul>
+            <li>Users should understand the situation in 5 seconds.</li>
+        </ul>
+        3. Visual Storytelling
+        <ul>
+          Use appropriate charts for different insights.
+            <li>Revenue trend - Line chart</li>
+            <li>Product comparison - Bar chart</li>
+            <li>Revenue trend - Funnel</li>
+            <li>Regional performance - Map</li>
+
+        </ul>
+        
+      </div>
+    </section>
+    <section class="gallery">
+      <h2>2. Dashboard Design</h2>
+      <div class="gallery-grid">
+        
+        <div class="shoter"></div>
+      </div>
+    </section>
+    <section class="row">
+      <div class="label">Top KPI Cards</div>
+      <div class="content">
+        <ul>
+            <li>Total Revenue</li>
+            <li>Sales Growth</li>
+            <li>Active Deals</li>
+            <li>Conversion Rate</li>
+        </ul>
+       </div>
+    </section>
+    <section class="row">
+      <div class="label">Data Visualization</div>
+      <div class="content">
+        <ul>
+            <li>Revenue trend line chart</li>
+            <li>Product performance bar chart</li>
+            <li>Regional sales map</li>
+            <li>Sales funnel visualization</li>
+        </ul>
+       </div>
+    </section>
+    <section class="row">
+      <div class="label">AI Insight Panel</div>
+      <div class="content">
+        Example insight:
+
+        “ <span class="txtbgPrd" >North region sales droppedsales dropped 12% this quarter.</span><span class="txtbggreen"> Focus on Product B campaigns.</span>”
+        
+       </div>
+    </section>
+    <section class="gallery">
+      <h2>3. Impact</h2>
+      <div class="gallery-grid">
+        
+        <div class="shoter"></div>
+      </div>
+    </section>
+    <section class="row">
+      <div class="label">Business Value</div>
+      <div class="content">
+        <ul>
+            <li>Faster decision making</li>
+            <li>Better understanding of sales performance</li>
+            <li>AI-generated recommendations</li>
+        </ul>
+       </div>
+    </section>
+    <section class="row">
+      <div class="label">Design Outcome</div>
+      <div class="content">
+        <span class="txtbggreen">A clear, scalable analytics dashboard</span> designed for modern data teams.
+       </div>
+    </section>
+    <section class="row">
+      <div class="label">Research Conclusion</div>
+      <div class="content">
+        My goal was not just to visualize data but to design a system that <span class="txtbggreen">helps users make faster business decisions.
+       </div>
+    </section>
+    <section class="gallery">
+      <h2>2. Design Phase</h2>
+    </section>
+    <section class="row">
+      <div class="label">Time takem</div>
+      <div class="content">
+        8 Hours!
+      </div>
+    </section>
+    <section class="row">
+      <div class="label">Tools used</div>
+      <div class="content">
+        <div class="iconExplainer"><span><img src="../images/figmaMakeicon.png" width="30px"></span>
+          Figma Make AI for intial design - 5 minutes
+        </div>
+        <div class="iconExplainer"><span><img src="../images/figma-icon.svg" width="20px"></span>
+          Figma for customization -2 Hours
+        </div>
+        <div class="iconExplainer"><span><img src="../images/codex-icon.png" width="30px"></span>
+          Open AI Codex for live application with design and code - 5 minutes
+        </div>
+        <div class="iconExplainer"><span><img src="../images/visualStudioLogo.png" width="30px"></span>
+          Visual studio for altrations- 1 hour
+        </div>
+        <div class="iconExplainer"><span><img src="../images/Antigravity-logo.png" width="30px"></span>
+          Google Antigravity for interaction customization - 1 hour
+        </div>
+        <div class="iconExplainer"><span><img src="../images/adobeIllustratorLogo.png" width="30px"></span>
+         
+          Adobe Illustrator for Vector Graphics - 1 hour 
+        </div>
+        <div class="iconExplainer">
+          <span><img src="../images/canvaLogo.png" width="30px"></span>
+          Canva for Graphic editing - 50 minutes
+        </div>
+      </div>
+    </section>
+    <section class="row">
+      <div class="label">Promt for Figma</div>
+      <div class="content">
+        Create a modern enterprise analytics dashboard for a Sales Intelligence platform.
+
+<p>Layout:
+
+* Left sidebar navigation with icons
+* Top bar with filters for date, region, and product
+* Grid layout dashboard
+</p>
+
+Include the following components:</br>
+1. KPI cards showing:
+<ul>
+  <li> Total Revenue</li>
+      <li> Sales Growth</li>
+      <li>Active Deals</li>
+      <li>Conversion Rate</li>
+</ul>
+
+2. Line chart showing revenue trends over time.</br>
+
+3. Bar chart showing sales by product category.</br>
+
+4. Regional performance map showing sales by location.</br>
+
+5. Sales funnel visualization:</br>
+   <ul><li>Leads → Opportunities → Deals → Closed Sales.</li></ul>
+
+6. AI Insight panel with recommendations such as:</br>
+   <ul><li>"North region revenue dropped 12% this quarter."</li></ul>
+</p>
+<p>
+Design style:
+Modern enterprise SaaS UI similar to Power BI or Tableau.
+</p>
+<p>
+
+Color palette:
+White background with blue and purple accents.
+<p>
+<p>
+Typography:
+Clean and readable with strong hierarchy for data.
+</p>
+<p>
+Target users:
+Sales managers and business analysts.
+</p>
+      </div>
+    </section>
+    
+    <section class="row">
+      <div class="label">Live demo - Figma make</div>
+      <div class="content"> 
+        <a href="https://www.figma.com/make/VL6kBZIMR8AE30qZLZUT7H/Enterprise-Analytics-Dashboard?p=f&t=jbxGNAgeWp95RTd8-0&fullscreen=1" target="_blank">
+          Initial AI Design-Figma Make
+        </a>
+      </div>
+    </section>
+    <section class="row">
+      <div class="label">Live demo - Final with Codex-HTML css<br>
+          and it it ready to create 'React and Tailwind CSS' in minutes.
+      </div>
+      <div class="content">
+        <a href="SalesAnalytics-cs/index.html" target="_blank">
+          Final design After all altrations - Codex
+        </a>
+      </div>
+    </section>
+      
+  </main>
+</body>
+</html>
