@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../images/mg.svg " type="image/x-icon">
+  <title>Quick Donation App | Murukan Gopinathan</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --muted: #575757;
+      --line: #c8c8c8;
+      --panel: #f6f6f6;
+    }
+
+    * {
+      box-sizing: border-box;
+      min-width: 0;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      overflow-x: hidden;
+    }
+
+    html,
+    body {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 1080px;
+      margin: 0 auto;
+      border-left: 1px solid var(--line);
+      border-right: 1px solid var(--line);
+      overflow-x: clip;
+    }
+
+    img,
+    svg {
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+
+    .top {
+      border-bottom: 1px solid var(--line);
+      padding: 16px 20px;
+      overflow-x: clip;
+    }
+
+    .back {
+      color: #222;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      border-bottom: 1px solid var(--line);
+      padding: 26px;
+      background: #fbfbfb;
+      overflow-x: clip;
+    }
+
+    .hero-frame {
+      min-height: 320px;
+      aspect-ratio: 16 / 9;
+      border: 1px solid var(--line);
+      background: #f8f8f8;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+
+    .hero-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .title-row {
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 1fr 240px;
+      overflow-x: clip;
+    }
+
+    .title-main {
+      padding: 18px 20px;
+      border-right: 1px solid var(--line);
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      font-weight: 500;
+      line-height: 1.2;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+
+    .title-meta {
+      padding: 18px 16px;
+      background: #fcfcfc;
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.5;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+
+    .row {
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      overflow-x: clip;
+    }
+
+    .label {
+      border-right: 1px solid var(--line);
+      padding: 24px 20px;
+      background: var(--panel);
+      font-size: 2rem;
+      line-height: 1.2;
+      font-weight: 300;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+
+    .content {
+      padding: 24px 22px;
+      color: #252525;
+      line-height: 1.6;
+      font-size: 0.95rem;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+
+    .content p {
+      margin: 0 0 14px;
+    }
+
+    .content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .gallery {
+      border-bottom: 1px solid var(--line);
+      padding: 18px 20px 24px;
+      overflow-x: clip;
+    }
+
+    .gallery h2 {
+      margin: 0 0 14px;
+      font-size: 1.9rem;
+      font-weight: 400;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .shot {
+      height: 180px;
+
+
+    }
+
+    .shoter {
+      height: auto;
+
+
+    }
+
+    .txtbgPrd {
+      background-color: #ffe1e1;
+    }
+
+    .iconExplainer {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .iconExplainer span {
+      margin-right: 0;
+    }
+
+    .row>*,
+    .title-row>*,
+    .gallery>* {
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    .sub-frame {
+      min-height: 120px;
+
+    }
+
+    .sub-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .subTttl {
+      font-size: 16px;
+    }
+
+    @media (max-width: 900px) {
+      .page {
+        border-left: 0;
+        border-right: 0;
+      }
+
+      .title-row,
+      .row {
+        grid-template-columns: 1fr;
+      }
+
+      .title-main,
+      .label {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .label {
+        font-size: 1.5rem;
+        padding: 16px;
+      }
+
+      .content {
+        padding: 18px 16px;
+      }
+
+      .hero-frame {
+        min-height: 260px;
+        aspect-ratio: 4 / 3;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .hero-frame {
+        min-height: 220px;
+        aspect-ratio: 1 / 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <div class="top">
+      <a class="back" href="../index.html">← Back</a>
+    </div>
+
+    <section class="hero">
+      <div class="hero-frame">
+        <img src="../images/sdg-01.png" alt="Data Analytics">
+      </div>
+    </section>
+
+    <section class="title-row">
+      <div class="title-main">
+        <h1>Analyzing raw data in order to unearth actionable insights about that data.</h1>
+      </div>
+      <aside class="title-meta">
+        <strong>Role:</strong> Senior UX Designer<br>
+        <strong>Domain:</strong> Data Analyzis<br>
+        <strong>Duration:</strong> 2024-25
+      </aside>
+    </section>
+
+    <section class="row">
+      <div class="label">What is this product?</div>
+      <div class="content">
+
+        <p>Provides a cloud-based AI and machine learning
+          platform that allows users to choose from several technological capabilities,
+          including Data Analytics, Text Analytics,
+          Image Analytics, Video Analytics, Forecasting, and Optical Character Recognition. </p>
+
+      </div>
+    </section>
+
+    <section class="row">
+      <div class="label">Referance link 1 </br>
+        
+      </div>
+      <div class="content ">
+        <a href="https://www.sedge.ai/data-analytics-old"
+          target="_blank">Updated design and Details of the project that I worked in 2024
+          </a>
+      </div>
+    </section>
+    <section class="row">
+      <div class="label">Referance link 2 </br>
+        
+      </div>
+      <div class="content ">
+        <a href="https://www.figma.com/proto/Q20xTzTpocZTViiWcBrycs/Untitled?node-id=3-8&t=1Egfw14BoikRAFgI-0&scaling=contain&content-scaling=fixed&page-id=0%3A1"
+          target="_blank">Design proposal in 2025
+          </a>
+      </div>
+    </section>
+    
+
+  </main>
+</body>
+
+</html>
