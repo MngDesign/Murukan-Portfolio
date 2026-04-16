@@ -438,6 +438,8 @@ window.addEventListener('resize', () => {
   if (window.innerWidth > 1100) {
     toggleQuoteInfo(false);
   }
+
+  syncAIResponsiveState();
 });
 
 /* ── Quote Chat (Step 2) ── */
@@ -805,6 +807,22 @@ function toggleAI(forceOpen) {
   toggle.setAttribute('aria-expanded', String(shouldOpen));
 }
 
+let isCompactAIViewport = null;
+
+function syncAIResponsiveState() {
+  const panel = document.getElementById('aiPanel');
+  const toggle = document.getElementById('aiPanelToggle');
+  if (!panel || !toggle) return;
+
+  const isCompact = window.innerWidth <= 1100;
+  if (isCompact === isCompactAIViewport) return;
+
+  isCompactAIViewport = isCompact;
+  panel.classList.toggle('is-collapsed', isCompact);
+  toggle.classList.toggle('is-hidden', !isCompact);
+  toggle.setAttribute('aria-expanded', String(!isCompact));
+}
+
 /* ── Form Helpers ── */
 function adjustCount(delta) {
   const el = document.getElementById('personCount');
@@ -1143,5 +1161,6 @@ document.addEventListener('DOMContentLoaded', () => {
   Theme.boot(); // <--- This was missing!
   DashboardCharts.init();
   updateGreeting();
+  syncAIResponsiveState();
   setInterval(updateGreeting, 60000); // Update every minute
 });
