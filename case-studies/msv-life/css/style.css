@@ -238,7 +238,27 @@ body.dark .info-card-subtle { background: rgba(22,163,74,.08); border-color: rgb
 body.dark .quote-chat-window { background: var(--bg); }
 body.dark .ai-msg .chat-bubble { background: var(--surface-2); border-color: var(--border); }
 body.dark .recommendation-card { border-color: rgba(22,163,74,.4); background: var(--surface); }
-body.dark .entry-ai:hover { background: rgba(229,57,53,.06); }
+body.dark .entry-card {
+  background: linear-gradient(180deg, rgba(34,38,58,.96) 0%, rgba(26,29,39,.98) 100%);
+  border-color: rgba(255,255,255,.08);
+  color: var(--text-primary);
+}
+body.dark .entry-card-title {
+  color: var(--text-primary);
+}
+body.dark .entry-card-desc {
+  color: #C4C7DA;
+}
+body.dark .entry-card-badge {
+  background: #EF5350;
+  color: #FFFFFF;
+  box-shadow: 0 8px 18px rgba(239,83,80,.22);
+}
+body.dark .entry-card:hover {
+  background: linear-gradient(180deg, rgba(42,47,71,.98) 0%, rgba(30,34,48,1) 100%);
+  border-color: rgba(239,83,80,.45);
+}
+body.dark .entry-ai:hover { background: linear-gradient(180deg, rgba(68,33,39,.98) 0%, rgba(40,28,34,1) 100%); }
 body.dark .search-bar { background: var(--surface-2); }
 body.dark .rider-option:hover { background: rgba(229,57,53,.08); }
 
@@ -1768,7 +1788,6 @@ select.form-input { cursor: pointer; }
 @media (min-width: 701px) and (max-width: 1100px) {
   .main-wrapper { margin-left: 64px !important; max-width: calc(100vw - 64px) !important; }
   .dashboard-grid { grid-template-columns: 1fr; }
-  .ai-panel { display: none; }
   .stats-row { grid-template-columns: repeat(2, 1fr); }
   .step-two-col { grid-template-columns: 1fr; }
   .quote-chat-col { width: 100%; border-right: none; }
@@ -2043,27 +2062,25 @@ select.form-input { cursor: pointer; }
 
 /* ══════════════════════════════════════════
    AI PANEL — SMALL & MEDIUM SCREENS (≤1100px)
-   Remove fixed overlay; render inline at bottom of dashboard
+   Keep toggle visible near viewport bottom and open panel as overlay
 ══════════════════════════════════════════ */
 @media (max-width: 1100px) {
   .ai-panel {
-    position: static !important;
-    width: 100% !important;
-    height: auto !important;
+    position: fixed !important;
     top: auto !important;
-    right: auto !important;
-    max-height: 480px;
-    border-radius: var(--radius-lg);
-    display: flex !important;
-    margin-top: 24px;
+    right: 20px !important;
+    bottom: calc(88px + env(safe-area-inset-bottom, 0px));
+    width: min(360px, calc(100vw - 40px)) !important;
+    height: min(520px, calc(100dvh - var(--nav-h) - 124px - env(safe-area-inset-bottom, 0px))) !important;
+    max-height: calc(100dvh - var(--nav-h) - 124px - env(safe-area-inset-bottom, 0px));
+    margin-top: 0;
     box-shadow: var(--shadow-md);
   }
   .ai-panel-toggle {
     top: auto;
     right: 20px;
-    bottom: 20px;
+    bottom: calc(20px + env(safe-area-inset-bottom, 0px));
   }
-  /* Dashboard grid: single column so AI panel sits below content */
   .dashboard-grid {
     grid-template-columns: 1fr !important;
   }
@@ -2116,20 +2133,17 @@ select.form-input { cursor: pointer; }
     pointer-events: auto;
   }
   .ai-panel {
-    position: static !important;
-    width: 100% !important;
-    height: auto !important;
-    max-height: 420px;
-    top: auto !important;
-    right: auto !important;
-    border-radius: var(--radius-lg);
-    display: flex !important;
-    margin-top: 16px;
+    right: 12px !important;
+    left: 12px;
+    bottom: calc(78px + env(safe-area-inset-bottom, 0px));
+    width: auto !important;
+    height: min(460px, calc(100dvh - var(--nav-h) - 108px - env(safe-area-inset-bottom, 0px))) !important;
+    max-height: calc(100dvh - var(--nav-h) - 108px - env(safe-area-inset-bottom, 0px));
     box-shadow: var(--shadow-md);
   }
   .ai-panel-toggle {
     right: 16px;
-    bottom: 16px;
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
     padding: 10px 12px;
   }
   .ai-panel-toggle-label {
