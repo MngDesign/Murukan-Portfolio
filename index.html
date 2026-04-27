@@ -47,15 +47,26 @@
     }
 
     .logo-mark {
-      width: 30px;
-      height: 30px;
-      display: grid;
-      place-items: center;
+      display: flex;
+      align-items: center;
+      gap: 10px;
       font-size: 0.66rem;
       font-weight: 600;
       letter-spacing: 0.9px;
       color: #333;
-      
+      white-space: nowrap;
+    }
+
+    .logo-mark img {
+      width: 30px;
+      height: 30px;
+      display: block;
+      flex: 0 0 auto;
+    }
+
+    .logo-title {
+      display: block;
+      line-height: 1.2;
     }
 
     .hero {
@@ -95,16 +106,22 @@
     }
 
     .hero-image {
-      position: relative;
-      min-height: 320px;
+      
       aspect-ratio: 4 / 3;
       display: grid;
       place-items: center;
       overflow: hidden;
-      background-image: url("images/wlcomepf.png" );
+      position: relative;
+      width: 100%;
+      height: 500px;
       background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
+    }
+
+    .hero-image video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .hero-image::before {
@@ -126,6 +143,22 @@
      
       
     }
+    .video-container {
+      position: relative;
+      width: 100%;                /* Or fixed size */
+      height: 400px;              /* Or height: 100vh for full viewport */
+      overflow: hidden;           /* Crucial: Hides video outside bounds */
+}
+    .back-video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;         /* Fills div without distortion */
+      transform: translate(-50%, -50%); /* Centers the video */
+      z-index: -1;               /* Places it behind content */
+}
 
     .mini-nav {
       border-top: 1px solid var(--line);
@@ -170,16 +203,8 @@
     }
 
     .mini-nav .logo-mark {
-      flex: 0 0 auto;
-    }
-
-    .mini-nav-title {
       margin-right: auto;
-      margin-left: -12px;
-      font-size: 0.82rem;
-      font-weight: 500;
-      color: #222;
-      white-space: nowrap;
+      flex: 0 0 auto;
     }
 
     .about-intro {
@@ -280,8 +305,19 @@
       
         background-image: url(images/project-02b-Tn.png);
     }
+        .thumb-a1 {
+      
+        background-image: url(images/project-11-Tn.png);
+    }
+       .thumb-a2 {
+      
+        background-image: url(images/project-12-Tn.png);
+    }
+       .thumb-a3 {
+      
+        background-image: url(images/project-13-Tn.png);
+    }
 
-    
 
     .project-body {
       padding: 10px 12px 14px;
@@ -454,6 +490,11 @@ a:active {
         padding: 10px 14px;
         gap: 14px;
       }
+
+      .logo-mark {
+        font-size: 0.62rem;
+        letter-spacing: 0.5px;
+      }
     }
 
     @media (max-width: 640px) {
@@ -482,9 +523,9 @@ a:active {
   <main class="page">
     <div class="nav-sticky-sentinel" aria-hidden="true"></div>
     <div class="mini-nav">
-      <span class="logo-mark"><img src="images/mg.svg">
-</span>
-      <span class="mini-nav-title">Murukan Gopinathn- Senior Lead UX Designer</span>
+      <span class="logo-mark"><img src="images/mg.svg" alt="MG logo">
+        <span class="logo-title">Murukan Gopinathn- Senior Lead UX Designer</span>
+      </span>
       
       <span><a href="#abt">About</a></span>
       <span><a href="#prj">Projects</a></span>
@@ -494,15 +535,18 @@ a:active {
 
     <section class="row hero">
       <div class="hero-text">
-        <h1>Hello,<br>I'm a senior UX lead designer with 15 years of industry experience.</h1>
-        <h2><p class="subtitle">Definethe vision, strategy, and goals for both Front-End Engineering and UX Design teams.  I design end-to-end solutions across enterprise platforms, mobile apps, and web products.</p></h2>
-        <!----<p class="summary">
+        <h1>Hello,<br>I’m Murukan</h1>
+        <p class="subtitle">A Senior UX designer with 15 years of industry experience.</p>
+        <p class="summary">
+          I design scalable, user-first  product experiences that align business goals with real user needs. 
+          From research to delivery, I design end-to-end solutions across enterprise platforms, mobile apps, and web products.
           
-          
-        </p>--->
+        </p>
       </div>
       <div class="hero-image">
-        <span></span>
+        <video autoplay muted loop playsinline>
+          <source src="images/myportfolio-wlcm.mp4" type="video/mp4">
+        </video>
       </div>
     </section>
 
@@ -525,22 +569,34 @@ a:active {
         <p>I break down complex workflows into simpler, usable interfaces and design systems.</p>
       </article>
     </section>
-     <section class="about-intro">
-      <h2>Key Responsibilities & Experience as a ux lead designer/ developer:</h2>
-      <p>•	Definethe vision, strategy, and goals for both Front-End Engineering and UX Design teams.<br>
-	•	Led UI/UX practice across pre-sales, project delivery, and revenue generation, ensuring business growth and client alignment.<br>
-	•	Ensured consistent delivery of high-quality products within defined timelines.<br>
-	•	Oversaw application architecture to maintain high performance, scalability, and code modularity, while ensuring responsive design and compliance with WCAG 2.0 AA accessibility standards.<br>
-	•	Built and scaled a multidisciplinary team with strong expertise in modern web technologies and design tools, including HTML, CSS, Angular, React, Vite, TypeScript, Next.js, jQuery, LESS, Jasmine, Bootstrap, and Material UI, along with design platforms such as Figma and Adobe XD. Also incorporated AI-powered tools like Codex, Claude, and Antigravity to enhance productivity and innovation.<br>
-	•	Championed best practices in performance optimization, responsive/adaptive development, web modernization, UX research, usability testing, wireframing, and visual design.<br>
-	•	Mentored and guided junior team members, focusing on clean coding practices, problem-solving skills, and professional growth mindset.<br>
-</p>
-    </section>
     <section class="about-intro" id="prj">
       <h2>Case studies</h2>
       <p>Some of my recent work</p>
     </section>
 
+    <section class="row projects">
+      <a class="project" href="https://mngdesign.github.io/Murukan-Portfolio/case-studies/msv-life/index.html" target="_blank">
+        <div class="project-thumb thumb-a1"></div>
+        <div class="project-body">
+          <h3 class="project-title">Fintech website</h3>
+          <p class="project-desc">New design</p>
+        </div>
+      </a>
+      <a class="project" href="https://niodlab.github.io/niolab/" target="_blank">
+        <div class="project-thumb thumb-a2"></div>
+        <div class="project-body">
+          <h3 class="project-title">Corporate Business site</h3>
+          <p class="project-desc">Reworked information architecture and interaction models for enterprise users.</p>
+        </div>
+      </a>
+      <a class="project" href="https://niodlab.github.io/neodart" target="_blank"> 
+        <div class="project-thumb thumb-a3"></div>
+        <div class="project-body">
+          <h3 class="project-title">Ecomerce</h3>
+          <p class="project-desc">Improved implementation and review flows for operational efficiency.</p>
+        </div>
+      </a>
+    </section>
     <section class="row projects">
       <a class="project" href="case-studies/donation.html">
         <div class="project-thumb thumb-a"></div>
@@ -564,6 +620,7 @@ a:active {
         </div>
       </a>
     </section>
+
     <section class="row projects">
       <a class="project" href="case-studies/sedge-da.html">
         <div class="project-thumb thumb-c"></div>
