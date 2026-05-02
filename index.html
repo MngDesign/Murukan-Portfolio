@@ -70,14 +70,19 @@
     }
 
     .hero {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       min-height: 320px;
       margin-top: 14px;
+      background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
+        url('images/mng-bg.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
     .hero-text {
       padding: 38px 30px;
-      border-right: 1px solid var(--line);
+      /*border-right: 1px solid var(--line);*/
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -105,60 +110,7 @@
       max-width: 64ch;
     }
 
-    .hero-image {
-      
-      aspect-ratio: 4 / 3;
-      display: grid;
-      place-items: center;
-      overflow: hidden;
-      position: relative;
-      width: 100%;
-      height: 500px;
-      background-repeat: no-repeat;
-    }
-
-    .hero-image video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .hero-image::before {
-      content: "";
-      width: 68%;
-      height: 68%;
-      border: none;
-      
-      
-    }
-
-    .hero-image span {
-      position: absolute;
-      bottom: 12px;
-      right: 14px;
-      font-size: 0.72rem;
-      color: #383838;
-      letter-spacing: 0.25px;
-     
-      
-    }
-    .video-container {
-      position: relative;
-      width: 100%;                /* Or fixed size */
-      height: 400px;              /* Or height: 100vh for full viewport */
-      overflow: hidden;           /* Crucial: Hides video outside bounds */
-}
-    .back-video {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;         /* Fills div without distortion */
-      transform: translate(-50%, -50%); /* Centers the video */
-      z-index: -1;               /* Places it behind content */
-}
+    
 
     .mini-nav {
       border-top: 1px solid var(--line);
@@ -536,32 +488,31 @@ a:active {
     <section class="row hero">
       <div class="hero-text">
         <h1>Hello,<br>I’m Murukan</h1>
-        <p class="subtitle">A Senior UX designer with 15 years of industry experience.</p>
+        <p class="subtitle">A Senior UX designer with 9 years of industry experience.</p>
         <p class="summary">
           I design scalable, user-first  product experiences that align business goals with real user needs. 
           From research to delivery, I design end-to-end solutions across enterprise platforms, mobile apps, and web products.
           
         </p>
       </div>
-      <div class="hero-image">
-        <video autoplay muted loop playsinline>
-          <source src="images/myportfolio-wlcm.mp4" type="video/mp4">
-        </video>
-      </div>
+      
     </section>
 
     <section class="about-intro">
-      <h2>Why you should work with me</h2>
-      <p>I create practical UX solutions, collaborate deeply with teams, and focus on measurable outcomes.</p>
+      <h2></h2>
+      <p><h3>I create practical UX solutions, collaborate deeply with teams, and focus on measurable outcomes with a perfect blend of creativity, empathy & AI.
+        </h3>
+      </p>
     </section>
 
     <section class="row value-grid">
       <article class="value-card">
-        <h3>I get things done (Done well in time)</h3>
+        <h3>I get things done well in time</h3>
         <p>I deliver clear, actionable UX that helps teams move forward quickly and confidently.</p>
+        <p> &#9734;&#9734;&#9734;&#9734;&#9734;</p>
       </article>
       <article class="value-card">
-        <h3>Leads with collaboration, not ego.</h3>
+        <h3>Leads with collaboration.</h3>
         <p>I enjoy close collaboration with PMs, developers, and business stakeholders.</p>
       </article>
       <article class="value-card">
@@ -684,13 +635,13 @@ a:active {
         <ul>
           <li>Figma</li>
           <li>Figma Make AI</li>
-          <li>Adobe XD</li>
-          <li>Adobe Illustrator</li>
-          <li>Photoshop</li>
+          <li>Framer AI</li>
           <li>Open AI Codex</li>
-          <li>Visual studioa</li>
+          <li>Adobe /Canva</li>
+          <li>Gemini Antigravity</li>
+          <li>Claude design AI</li>
           <li>HTML / CSS</li>
-          <li>Usability testing tools</li>
+          <li>Stitch AI</li>
         </ul>
       </div>
       <div class="bottom-col">
