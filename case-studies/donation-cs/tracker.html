@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GiveFlow | My Donation Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-1" aria-hidden="true"></div>
+    <div class="bg-orb orb-2" aria-hidden="true"></div>
+
+    <header class="container site-header">
+      <a class="logo" href="index.html">GiveFlow</a>
+      <nav class="main-nav">
+        <a href="index.html#impact">Impact</a>
+        <a href="index.html#stories">Stories</a>
+        <a href="index.html#trust">Trust</a>
+      </nav>
+      <a href="index.html" class="btn btn-outline" style="text-decoration: none; display: inline-flex; align-items: center;">New Donation</a>
+    </header>
+
+    <main class="container layout tracker-layout">
+      <!-- Top banner across layout grid -->
+      <section class="tracker-header">
+        <a href="index.html" class="back-link">&larr; Back to Home</a>
+        <h1 class="tracker-title">Your Impact Dashboard</h1>
+        <p class="tracker-subtitle">Real-time status, receipts, and details of your contributions.</p>
+        <div class="tracker-verification-badges">
+          <span class="verification-pill"><span class="pill-dot green"></span> Audited Registry Verified</span>
+          <span class="verification-pill"><span class="pill-dot blue"></span> GuideStar Platinum</span>
+          <span class="verification-pill"><span class="pill-dot gold"></span> 100/100 Charity Navigator</span>
+        </div>
+      </section>
+
+      <!-- Summary metrics -->
+      <section class="tracker-stats-grid">
+        <article class="stat-card">
+          <div class="stat-icon">💰</div>
+          <div>
+            <h3>$375.00</h3>
+            <p>Total Contributed</p>
+          </div>
+        </article>
+        <article class="stat-card">
+          <div class="stat-icon">☀️</div>
+          <div>
+            <h3>75 Days</h3>
+            <p>Full Learning Funded</p>
+          </div>
+        </article>
+        <article class="stat-card">
+          <div class="stat-icon">📈</div>
+          <div>
+            <h3>100%</h3>
+            <p>Transparency Score</p>
+          </div>
+        </article>
+      </section>
+
+      <!-- Main Columns -->
+      <!-- Left Column: Records -->
+      <section class="tracker-main">
+        <div class="dashboard-card">
+          <div class="card-header-row">
+            <h2>Donation History</h2>
+            <div class="filter-group">
+              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn" data-filter="Supplies">Supplies</button>
+              <button class="filter-btn" data-filter="Meals">Meals</button>
+              <button class="filter-btn" data-filter="Training">Training</button>
+            </div>
+          </div>
+
+          <div class="table-scroll">
+            <table class="records-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Amount</th>
+                  <th>Frequency</th>
+                  <th>Cause</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="recordsBody">
+                <!-- Records will be populated by JS, fallback in HTML -->
+                <tr data-cause="Supplies">
+                  <td class="bold">Jun 12, 2026</td>
+                  <td class="primary-color font-sora">$100.00</td>
+                  <td><span class="badge badge-one-time">One-Time</span></td>
+                  <td>Books & Supplies</td>
+                  <td><span class="status-indicator status-delivered">Impact Delivered</span></td>
+                  <td><button class="btn-action view-receipt-btn" data-id="TXN-98402">View Receipt</button></td>
+                </tr>
+                <tr data-cause="Meals">
+                  <td class="bold">May 18, 2026</td>
+                  <td class="primary-color font-sora">$50.00</td>
+                  <td><span class="badge badge-one-time">One-Time</span></td>
+                  <td>School Meals</td>
+                  <td><span class="status-indicator status-delivered">Impact Delivered</span></td>
+                  <td><button class="btn-action view-receipt-btn" data-id="TXN-73412">View Receipt</button></td>
+                </tr>
+                <tr data-cause="Training">
+                  <td class="bold">Apr 25, 2026</td>
+                  <td class="primary-color font-sora">$25.00</td>
+                  <td><span class="badge badge-recurring">Monthly</span></td>
+                  <td>Teacher Training</td>
+                  <td><span class="status-indicator status-active">Active Support</span></td>
+                  <td><button class="btn-action view-receipt-btn" data-id="TXN-56214">View Receipt</button></td>
+                </tr>
+                <tr data-cause="Training">
+                  <td class="bold">Mar 25, 2026</td>
+                  <td class="primary-color font-sora">$25.00</td>
+                  <td><span class="badge badge-recurring">Monthly</span></td>
+                  <td>Teacher Training</td>
+                  <td><span class="status-indicator status-delivered">Impact Delivered</span></td>
+                  <td><button class="btn-action view-receipt-btn" data-id="TXN-43189">View Receipt</button></td>
+                </tr>
+                <tr data-cause="Training">
+                  <td class="bold">Feb 25, 2026</td>
+                  <td class="primary-color font-sora">$25.00</td>
+                  <td><span class="badge badge-recurring">Monthly</span></td>
+                  <td>Teacher Training</td>
+                  <td><span class="status-indicator status-delivered">Impact Delivered</span></td>
+                  <td><button class="btn-action view-receipt-btn" data-id="TXN-32901">View Receipt</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right Column: Spending details & timeline -->
+      <section class="tracker-sidebar">
+        <!-- Utilization breakdown card -->
+        <div class="dashboard-card spending-breakdown-card">
+          <h2>Fund Utilization</h2>
+          <p class="subtitle">Where your total of <strong>$375.00</strong> was spent:</p>
+
+          <div class="breakdown-list">
+            <div class="breakdown-item">
+              <div class="breakdown-meta">
+                <span>Program Supplies (84%)</span>
+                <strong>$315.00</strong>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 84%; background: #1a7c5d;"></div>
+              </div>
+            </div>
+
+            <div class="breakdown-item">
+              <div class="breakdown-meta">
+                <span>Operations & Delivery (10%)</span>
+                <strong>$37.50</strong>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 10%; background: #d75a36;"></div>
+              </div>
+            </div>
+
+            <div class="breakdown-item">
+              <div class="breakdown-meta">
+                <span>Transparency & Reporting (6%)</span>
+                <strong>$22.50</strong>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 6%; background: #5a6a83;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="trust-note">
+            🛡️ Audited monthly. Every single transaction can be verified on the blockchain registry.
+          </div>
+        </div>
+
+        <!-- Latest Shipment Delivery Status -->
+        <div class="dashboard-card delivery-card">
+          <h2>Latest Supply Pipeline</h2>
+          <p class="subtitle">Target: Asha's Primary Classroom (Bangalore)</p>
+
+          <div class="timeline">
+            <div class="timeline-step completed">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4>Funds Allocated</h4>
+                <p>June 12, 2026 - $100.00 designated to supplies</p>
+              </div>
+            </div>
+
+            <div class="timeline-step completed">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4>Items Procured</h4>
+                <p>June 14, 2026 - 12 educational kits, 2 tablets</p>
+              </div>
+            </div>
+
+            <div class="timeline-step active">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4>Delivered & Handed Over</h4>
+                <p>June 16, 2026 - Verified by teacher classroom receipt</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trust accreditation card in sidebar -->
+        <div class="dashboard-card security-accreditations-card">
+          <h2>Accreditation & Safety</h2>
+          <p class="subtitle">Platform safety and auditing seals</p>
+          <div class="accreditation-list">
+            <div class="acc-list-item">
+              <span class="acc-badge cn-badge">CN</span>
+              <div>
+                <strong>Charity Navigator</strong>
+                <p>100% Finance & Transparency</p>
+              </div>
+            </div>
+            <div class="acc-list-item">
+              <span class="acc-badge gs-badge">GS</span>
+              <div>
+                <strong>GuideStar Platinum</strong>
+                <p>Highest disclosure level achieved</p>
+              </div>
+            </div>
+            <div class="acc-list-item">
+              <span class="acc-badge ssl-badge">SEC</span>
+              <div>
+                <strong>256-Bit SSL Secured</strong>
+                <p>Encrypted data transfers</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Receipt / Impact Modal -->
+    <div class="modal" id="receiptModal" aria-hidden="true">
+      <div class="modal-card receipt-card">
+        <div class="receipt-header">
+          <div class="logo">GiveFlow</div>
+          <span class="receipt-badge">TAX-EXEMPT RECEIPT</span>
+        </div>
+        <div class="receipt-divider"></div>
+        <h3 id="receiptTitle">Impact Certificate</h3>
+        <p class="receipt-intro">Thank you for funding education. This receipt documents the social contribution of your funds.</p>
+        
+        <table class="receipt-details-table">
+          <tr>
+            <td>Transaction ID:</td>
+            <td id="receiptTxn" class="bold">TXN-98402</td>
+          </tr>
+          <tr>
+            <td>Date Processed:</td>
+            <td id="receiptDate">June 12, 2026</td>
+          </tr>
+          <tr>
+            <td>Amount (USD):</td>
+            <td id="receiptAmount" class="bold">$100.00</td>
+          </tr>
+          <tr>
+            <td>Allocated Cause:</td>
+            <td id="receiptCause">Books & Supplies</td>
+          </tr>
+          <tr>
+            <td>Social Impact:</td>
+            <td id="receiptImpact" class="highlight">20 school learning kits and materials</td>
+          </tr>
+        </table>
+
+        <div class="receipt-footer">
+          <p>GiveFlow is a registered 501(c)(3) organization. All donations are tax-deductible.</p>
+          <div class="receipt-buttons">
+            <button class="btn btn-outline" id="closeReceiptBtn">Close</button>
+            <button class="btn btn-primary" id="downloadReceiptBtn">Download PDF</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="tracker.js"></script>
+  </body>
+</html>
