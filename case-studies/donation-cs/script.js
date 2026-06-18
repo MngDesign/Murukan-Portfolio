@@ -128,21 +128,45 @@ function showToast(message) {
   }, 2200);
 }
 
+function triggerCelebrationFlash() {
+  const flash = document.createElement("div");
+  flash.className = "celebration-flash";
+  document.body.appendChild(flash);
+  setTimeout(() => {
+    flash.classList.add("fade-out");
+  }, 40);
+  setTimeout(() => {
+    flash.remove();
+  }, 1600);
+}
+
+function triggerCelebrationDim() {
+  const dim = document.createElement("div");
+  dim.className = "celebration-dim";
+  document.body.appendChild(dim);
+  setTimeout(() => {
+    dim.classList.add("fade-out");
+  }, 2400); // starts fading out after 2.4s
+  setTimeout(() => {
+    dim.remove();
+  }, 5000); // removes completely after 5s
+}
+
 function launchCelebrationBurst(originButton) {
   const rect = originButton.getBoundingClientRect();
   const centerX = rect.left + rect.width / 2;
   const centerY = rect.top + rect.height / 2;
   const layer = document.createElement("div");
   const colors = [
-    "#ffd84a",
-    "#06a63f",
-    "#5c7cff",
-    "#ffffff",
-    "#ff9b52",
-    "#7c5cff",
-    "#3fd5a5",
+    "#ffd700", // Gold
+    "#00ffcc", // Neon Teal
+    "#ff3366", // Neon Pink
+    "#33ccff", // Electric Blue
+    "#39ff14", // Neon Green
+    "#ff6600", // Neon Orange
+    "#ffffff"  // White
   ];
-  const particleCount = 56;
+  const particleCount = 85;
 
   layer.className = "burst-layer";
   document.body.appendChild(layer);
@@ -154,11 +178,11 @@ function launchCelebrationBurst(originButton) {
       const distance = distanceMin + Math.random() * (distanceMax - distanceMin);
       const x = Math.cos(angle) * distance;
       const y = Math.sin(angle) * distance - 20;
-      const size = 14 + Math.random() * 18;
+      const size = 26 + Math.random() * 24; // Enlarged (26px to 50px)
       const rotation = (Math.random() - 0.5) * 520;
 
       particle.className = "burst-star";
-      particle.textContent = Math.random() > 0.4 ? "✦" : "✶";
+      particle.textContent = Math.random() > 0.45 ? "✦" : "✶";
       particle.style.left = `${centerX}px`;
       particle.style.top = `${centerY}px`;
       particle.style.fontSize = `${size}px`;
@@ -167,33 +191,33 @@ function launchCelebrationBurst(originButton) {
 
       particle.animate(
         [
-          { transform: "translate(-50%, -50%) scale(0.55)", opacity: 0 },
+          { transform: "translate(-50%, -50%) scale(0.4)", opacity: 0 },
           {
-            transform: "translate(-50%, -50%) scale(1.14)",
+            transform: "translate(-50%, -50%) scale(1.15)",
             opacity: 1,
-            offset: 0.18,
+            offset: 0.12,
           },
           {
-            transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) rotate(${rotation}deg) scale(0.78)`,
+            transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) rotate(${rotation}deg) scale(0.7)`,
             opacity: 0,
           },
         ],
         {
-          duration: 900 + Math.random() * 560,
+          duration: 2000 + Math.random() * 1000, // Extended (2.0s to 3.0s)
           delay: delayBase + Math.random() * 90,
-          easing: "cubic-bezier(0.12, 0.86, 0.22, 1)",
+          easing: "cubic-bezier(0.1, 0.85, 0.2, 1)",
           fill: "forwards",
         }
       );
     }
   }
 
-  createWave(particleCount, 110, 230, 0);
-  createWave(26, 80, 170, 220);
+  createWave(particleCount, 130, 290, 0);
+  createWave(38, 80, 210, 220);
 
   setTimeout(() => {
     layer.remove();
-  }, 2200);
+  }, 4200); // Extended layer lifetime
 }
 
 function openGratitudeModal() {
@@ -204,39 +228,42 @@ function openGratitudeModal() {
 function launchConfettiRain() {
   const layer = document.createElement("div");
   const colors = [
-    "#ffd84a",
-    "#06a63f",
-    "#5c7cff",
-    "#ff9b52",
-    "#7c5cff",
-    "#3fd5a5",
-    "#ffffff",
+    "#ffd700", // Gold
+    "#00ffcc", // Neon Teal
+    "#ff3366", // Neon Pink
+    "#33ccff", // Electric Blue
+    "#39ff14", // Neon Green
+    "#ff6600", // Neon Orange
+    "#ffffff"  // White
   ];
-  const count = 130;
+  const count = 180; // Increased count
 
   layer.className = "burst-layer";
   document.body.appendChild(layer);
 
   for (let i = 0; i < count; i += 1) {
     const piece = document.createElement("span");
-    const width = 6 + Math.random() * 6;
-    const height = 10 + Math.random() * 12;
+    const isCircle = Math.random() > 0.45;
+    const width = 10 + Math.random() * 8; // Slightly larger confetti
+    const height = isCircle ? width : (14 + Math.random() * 14);
     const left = Math.random() * 100;
-    const delay = Math.random() * 750;
-    const duration = 1600 + Math.random() * 1200;
+    const delay = Math.random() * 1200; // Spread out release over 1.2s
+    const duration = 2800 + Math.random() * 1800; // Slower falling speeds (2.8s to 4.6s)
 
     piece.className = "confetti-piece";
     piece.style.left = `${left}vw`;
     piece.style.width = `${width}px`;
     piece.style.height = `${height}px`;
+    piece.style.borderRadius = isCircle ? "50%" : "3px";
     piece.style.background = colors[Math.floor(Math.random() * colors.length)];
-    piece.style.animation = `confettiFall ${duration}ms cubic-bezier(0.16, 0.84, 0.32, 1) ${delay}ms forwards`;
+    piece.style.boxShadow = `0 0 10px ${piece.style.background}`;
+    piece.style.animation = `confettiFall ${duration}ms cubic-bezier(0.15, 0.8, 0.3, 1) ${delay}ms forwards`;
     layer.appendChild(piece);
   }
 
   setTimeout(() => {
     layer.remove();
-  }, 3100);
+  }, 6500); // Confetti layer active longer
 }
 
 frequencyButtons.forEach((button) => {
@@ -298,6 +325,8 @@ nextBtn.addEventListener("click", () => {
 
   nextBtn.disabled = true;
   nextBtn.classList.add("btn-celebrate");
+  triggerCelebrationFlash();
+  triggerCelebrationDim();
   launchCelebrationBurst(nextBtn);
   setTimeout(() => {
     launchConfettiRain();
@@ -307,7 +336,7 @@ nextBtn.addEventListener("click", () => {
     nextBtn.classList.remove("btn-celebrate");
     openGratitudeModal();
     nextBtn.disabled = false;
-  }, 1700);
+  }, 3500); // Extended delay for full animation visibility
 });
 
 doneBtn.addEventListener("click", () => {
